@@ -1,0 +1,41 @@
+<section id="capstone">
+<h2>毕业项目建议</h2>
+<p class="lead">选一个，把前面所有阶段串起来。</p>
+<ol class="tight">
+  <li><strong>完整系统架构设计文档</strong>：选一个你参与过或感兴趣的真实系统（电商/IM/内容平台），交付 C4 全四层图 + 10 条 ADR + 分布式事务选型说明 + AI 功能引入的架构影响分析。</li>
+  <li><strong>AI 原生系统设计</strong>：设计一个 RAG + Agent 系统（企业知识库 / 代码审查 / 智能客服任选），包含向量库/模型网关/编排框架的选型 ADR，以及与已有系统集成的架构图。</li>
+  <li><strong>架构评审报告</strong>：找一个开源项目（Kafka/PostgreSQL/Redis/Kubernetes 任一组件），阅读其设计文档，写一份 3000 字评审报告：核心架构决策、权衡取舍、当时背景与现在的变化。</li>
+</ol>
+</section>
+
+<section id="tips">
+<h2>学习建议</h2>
+<ol class="tight">
+  <li><strong>先理解问题，再看解法。</strong>架构模式都是对特定问题的回答。先搞清楚要解决什么问题（延迟/吞吐/一致性/可维护性），再看模式，才能判断适不适合自己的场景。</li>
+  <li><strong>不要囤教程。</strong>主线只选两本（凤凰架构 + DDIA），其余当查阅资料。上面的清单是索引，不是待办。</li>
+  <li><strong>动手画图和写 ADR。</strong>架构设计是决策的记录，不是画漂亮图。每个阶段的产出目标都要落地，写不出 ADR 说明决策还没想清楚。</li>
+  <li><strong>AI 不改变架构的本质。</strong>引入 LLM/RAG/Agent 之后，系统面临的问题（延迟/可靠性/状态管理/可观测性）和经典分布式系统一样；区别在于不确定性更高、调试更难。</li>
+  <li><strong>关注一手来源。</strong>以官方设计文档、论文、工程博客为准；转述文章可能过时或失真，Star 数不代表质量。</li>
+</ol>
+</section>
+
+<section id="rating">
+<h2>评分标准</h2>
+<p>资料库和工具网站的每条收录都有一个 1–10 的综合评分，取四个维度的加权判断：</p>
+<table class="tbl" style="max-width:640px">
+<thead><tr><th>维度</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>内容质量</strong></td><td>讲清了什么、有没有实例/可运行代码、是否覆盖失败情形和权衡</td></tr>
+<tr><td><strong>来源可信度</strong></td><td>官方 / 权威作者 / 一线工程实践，优先于热度</td></tr>
+<tr><td><strong>维护状态</strong></td><td>最近是否有提交、链接是否可访问、内容是否仍然有效</td></tr>
+<tr><td><strong>独特性</strong></td><td>是否填补了其他资料的空缺，而非重复覆盖</td></tr>
+</tbody>
+</table>
+<div class="score-legend">
+  <span class="sc-badge">★★★ 顶级</span> 9 分：必读，通常是权威一手来源或领域奠基材料。<br>
+  <span class="sc-badge">★★☆ 推荐</span> 8 分：内容扎实、维护活跃，建议重点关注。<br>
+  <span class="sc-badge">★☆☆ 收录</span> 7 分：覆盖特定子主题，按需查阅。<br>
+  <span class="sc-badge sc-low">☆☆☆ 备选</span> 6 分：有一定价值但深度或覆盖有限，可酌情参考。
+</div>
+<p class="note">评分由维护者人工评定，每次资料库更新时同步复核。GitHub Star 数显示在资料库 ★ 列，仅代表热度，不影响评分。</p>
+</section>

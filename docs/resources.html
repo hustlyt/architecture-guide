@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>资料库 · 深入学习软件架构设计</title>
+<meta name="description" content="40 条软件架构书籍、文档、文章与论文，可搜索与筛选。">
+<link rel="alternate" type="application/rss+xml" title="深入学习软件架构设计 更新日志" href="feed.xml">
+<style>:root{
+    --bg:#fbfaf7; --fg:#1d1d1b; --muted:#6b6a65; --line:#e4e1d9; --card:#ffffff;
+    --accent:#b4532a; --accent-soft:#f6e7df; --ok:#2f7a4f; --chip:#efece5;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#161614; --fg:#ebe9e3; --muted:#a19f98; --line:#33322e; --card:#1f1f1c;
+      --accent:#e08a5f; --accent-soft:#3a271d; --ok:#6cc28f; --chip:#2a2926; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:16px/1.7 -apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif}
+  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 80px}
+  header h1{font-size:clamp(26px,4vw,38px);line-height:1.25;margin:0 0 12px;letter-spacing:-.5px}
+  header p.lead{color:var(--muted);margin:0 0 6px;max-width:760px}
+  .meta{font-size:13px;color:var(--muted)}
+  h2{font-size:24px;margin:56px 0 8px;padding-top:8px;border-top:1px solid var(--line)}
+  h2 small{font-size:14px;color:var(--muted);font-weight:400;margin-left:8px}
+  h3{font-size:18px;margin:24px 0 6px}
+  .verdict{background:var(--accent-soft);border-left:4px solid var(--accent);padding:18px 22px;border-radius:6px;margin:28px 0}
+  .verdict b{color:var(--accent)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+  .card .role{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+  .card h4{margin:4px 0 6px;font-size:17px}
+  .card p{margin:0;font-size:14px;color:var(--muted)}
+  .phase{display:grid;grid-template-columns:88px 1fr;gap:18px;padding:20px 0;border-bottom:1px dashed var(--line)}
+  .phase:last-child{border-bottom:none}
+  .phase .no{font-size:30px;font-weight:700;color:var(--accent);line-height:1}
+  .phase .no span{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:6px}
+  .phase h3{margin:0 0 6px}
+  .phase ul{margin:6px 0 0;padding-left:20px} .phase li{margin:3px 0}
+  .goal{font-size:14px;color:var(--ok);margin-top:8px}
+  .tag{display:inline-block;font-size:12px;padding:0 8px;border-radius:4px;background:var(--chip);color:var(--muted);margin-left:4px;vertical-align:1px}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+  .filters button{border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:4px 12px;font-size:13px;cursor:pointer}
+  .filters button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .tbl{width:100%;border-collapse:collapse;font-size:14px}
+  .tbl th,.tbl td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  .tbl th{font-size:12px;color:var(--muted);font-weight:600;position:sticky;top:0;background:var(--bg)}
+  .tbl td.n{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--muted)}
+  .tbl tr.cat td{background:var(--chip);font-weight:600;font-size:13px}
+  .t-off{color:var(--ok)} .t-ai{color:var(--accent)}
+  .pick{font-weight:700;color:var(--accent)}
+  .note{font-size:14px;color:var(--muted)}
+  ol.tight li,ul.tight li{margin:4px 0}
+  .tblwrap{overflow-x:auto}
+  @media (max-width:640px){
+    .phase{grid-template-columns:1fr;gap:6px}
+    .tbl .hide-sm{display:none}
+  }
+  footer{margin-top:60px;font-size:13px;color:var(--muted)}
+
+/* site chrome */
+.topbar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.wrap-top{max-width:1080px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-weight:700;color:var(--fg)}
+.topbar nav{display:flex;gap:14px;font-size:14px}
+.topbar nav a{color:var(--muted)} .topbar nav a.on{color:var(--accent);font-weight:600}
+.hero{margin-top:8px}
+.latest{font-size:14px;background:var(--chip);display:inline-block;padding:4px 12px;border-radius:6px;margin:10px 0 0}
+.toolbar{display:flex;flex-direction:column;gap:6px;margin:14px 0}
+.toolbar input{width:100%;max-width:420px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);font-size:14px}
+.filters{margin:0}
+.cnt{font-weight:400;color:var(--muted);margin-left:8px;font-size:12px}
+.fmt{display:block;font-size:12px;color:var(--muted)}
+.badge{display:inline-block;font-size:11px;padding:0 6px;border-radius:4px;margin-left:4px;vertical-align:1px;border:1px solid var(--line)}
+.badge.new{background:var(--accent);color:#fff;border-color:var(--accent)}
+.badge.warn{color:#b07a00} .badge.bad{color:#c0392b}
+.note-sm{font-size:12px;color:var(--muted);margin-top:2px}
+.log{border-top:1px solid var(--line);padding:20px 0}
+.log time{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.log h3{margin:2px 0 4px} .log h4{margin:14px 0 4px;font-size:14px;color:var(--muted)}
+.log ul{margin:0;padding-left:20px;font-size:14px} .log li{margin:3px 0}
+li.del{color:var(--muted);text-decoration:line-through}
+
+/* multi-page layout */
+.wrap{max-width:980px}
+.pagehead{margin:8px 0 20px} .pagehead h1,.phasepage h1,.hero h1{font-size:clamp(26px,4vw,36px);line-height:1.25;margin:0 0 8px}
+.lead{color:var(--muted);max-width:720px;margin:0 0 8px}
+.heroactions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 8px}
+.btn{display:inline-block;padding:9px 18px;border-radius:8px;background:var(--accent);color:#fff;font-weight:600}
+.btn:hover{text-decoration:none;opacity:.9} .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin:14px 0}
+.pcard{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;color:var(--fg)}
+.pcard:hover{border-color:var(--accent);text-decoration:none}
+.pno{font-size:22px;font-weight:700;color:var(--accent);min-width:46px;line-height:1.2}
+.pno small{display:block;font-size:11px;color:var(--muted);font-weight:400}
+.pcard b{display:block;font-size:15px} .ps{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.pcard .goal{font-size:12px;margin:6px 0 0}
+.cta{background:var(--accent-soft);border-radius:10px;padding:6px 22px 14px;margin-top:36px}
+.layout{display:grid;grid-template-columns:230px 1fr;gap:32px;align-items:start}
+.side{position:sticky;top:64px;display:flex;flex-direction:column;gap:2px;font-size:13px}
+.side a{padding:5px 10px;border-radius:6px;color:var(--muted)} .side a b{color:var(--accent);margin-right:4px}
+.side a.on{background:var(--chip);color:var(--fg);font-weight:600} .side a:hover{text-decoration:none;background:var(--chip)}
+.side .back{font-weight:700;color:var(--fg);margin-bottom:6px}
+.phasepage h2{font-size:18px;border:none;margin:28px 0 6px;padding:0}
+.phasepage h3{font-size:15px;margin:18px 0 2px;color:var(--muted)} .phasepage h3+ul{margin-top:4px}
+.phasepage ul{padding-left:20px} .phasepage li{margin:8px 0}
+.crumb{font-size:13px;color:var(--muted);margin:0 0 4px}
+.goal.big{background:var(--chip);border-radius:8px;padding:12px 16px;margin-top:24px;font-size:15px}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:36px;padding-top:16px;border-top:1px solid var(--line);font-size:14px}
+.pn a:last-child{text-align:right;margin-left:auto}
+.catbox{margin:2px 0} .catbox summary{cursor:pointer;font-size:13px;color:var(--muted)}
+.catbox .filters{margin-top:8px}
+.filters button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.empty{text-align:center;color:var(--muted);padding:32px 0}
+@media (max-width:760px){
+  .layout{grid-template-columns:1fr} .side{position:static;flex-direction:row;flex-wrap:wrap;gap:4px}
+  .side .back{width:100%} .side a{background:var(--chip)} .side a:not(.back){font-size:12px}
+  .pn{flex-direction:column} .pn a:last-child{text-align:left;margin:0}
+}
+.tbl td:nth-child(2){white-space:nowrap}
+.tbl td:first-child{min-width:200px}
+@media (max-width:640px){
+  .topbar nav{overflow-x:auto;white-space:nowrap;width:100%;gap:16px;padding-bottom:2px}
+  .wrap-top{padding:8px 16px}
+}
+
+/* tool cards page */
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin:20px 0}
+.tool-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.tool-card header{display:flex;flex-direction:column;gap:4px}
+.tool-card h3{margin:0;font-size:16px;line-height:1.3}
+.tool-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:12px;margin-top:4px}
+.sc-badge{font-size:12px;color:var(--accent);font-weight:600}
+.sc-badge.sc-low{color:var(--muted)}
+.score-legend{margin:18px 0;line-height:2;font-size:14px}
+.score-legend .sc-badge{margin-right:4px}
+.side-intro{font-size:12px;color:var(--muted);padding:0 10px 8px;margin-bottom:4px;line-height:1.5}
+.tool-desc{margin:0;font-size:14px;color:var(--fg);line-height:1.6}
+.tool-links{font-size:12px;color:var(--muted);word-break:break-all}
+.stat{font-size:12px;color:var(--muted)}
+.muted{color:var(--muted)}
+</style></head>
+<body><div class="topbar"><div class="wrap-top"><a class="brand" href="index.html">架构设计指南</a>
+<nav><a href="index.html">首页</a><a href="path.html">学习路线</a><a href="resources.html" class=on>资料库</a><a href="tools.html">工具网站</a><a href="about.html">关于</a><a href="changelog.html">更新日志</a></nav></div></div>
+<div class="wrap">
+<header class="pagehead"><h1>资料库</h1>
+<p class="lead">40 条书籍、教程、文章、论文与工具，每周自动检索并经质量审核后更新。支持搜索标题、说明、仓库名，可叠加筛选。</p></header>
+<div class="toolbar">
+  <input id="q" type="search" placeholder="搜索，例如：DDD、分布式、ADR、RAG…" aria-label="搜索资料" autofocus>
+  <div class="filters" id="filters" data-group="main">
+    <button class="on" data-k="all">全部</button>
+    <button data-k="t:official">官方</button><button data-k="t:community">第三方</button>
+    <button data-k="t:academic">学术</button><button data-k="t:ai">AI 生成</button>
+    <button data-k="f:article">文章</button><button data-k="f:video">视频</button>
+    <button data-k="f:paper">论文</button><button data-k="f:course">课程</button>
+    <button data-k="zh">只看中文</button><button data-k="new">最近新增</button>
+    <button data-k="sc:9">★★★ 顶级</button><button data-k="sc:8">★★☆ 推荐+</button><button data-k="sc:7">★☆☆ 收录+</button>
+  </div>
+  <details class="catbox"><summary>按分类</summary><div class="filters" id="catfilters"><button data-k="c:classics">系统设计经典（教程/书籍）</button><button data-k="c:patterns">架构模式与原则</button><button data-k="c:distributed">分布式系统</button><button data-k="c:ddd">DDD 与领域建模</button><button data-k="c:adr">架构决策记录（ADR）</button><button data-k="c:ai-arch">AI 时代架构</button><button data-k="c:tools">架构工具与辅助网站</button></div></details>
+  <p class="note" id="count" aria-live="polite"></p>
+</div>
+<div class="tblwrap"><table class="tbl" id="reftbl">
+<thead><tr><th>资料</th><th>类型</th><th class="hide-sm">语言</th><th>★</th><th>说明</th></tr></thead>
+<tbody>
+<tr class="cat" data-c="classics"><td colspan="5">系统设计经典（教程/书籍）<span class="cnt">6</span></td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="classics" data-sc="9" data-s="donnemartin/system-design-primer 分布式系统面试最全参考，30+ 经典题，含图解与参考实现  donnemartin/system-design-primer 中英文 第三方 仓库"><td><a href="https://github.com/donnemartin/system-design-primer">donnemartin/system-design-primer</a> <span class="pick">★推荐</span> <span class="sc-badge" title="评分 9/10">★★★ 顶级</span></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">中英文</td><td class="n">377.9k</td><td>分布式系统面试最全参考，30+ 经典题，含图解与参考实现</td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="classics" data-sc="9" data-s="bytebytegohq/system-design-101 图解系统设计，涵盖通信协议、数据库、缓存、微服务、ci/cd 核心模块  bytebytegohq/system-design-101 英文 第三方 仓库"><td><a href="https://github.com/ByteByteGoHq/system-design-101">ByteByteGoHq/system-design-101</a> <span class="pick">★推荐</span> <span class="badge warn">久未更新</span> <span class="sc-badge" title="评分 9/10">★★★ 顶级</span></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">91.2k</td><td>图解系统设计，涵盖通信协议、数据库、缓存、微服务、CI/CD 核心模块</td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="classics" data-sc="8" data-s="ashishps1/awesome-system-design-resources 系统设计精选资源清单，含关键概念、高可用、数据库、缓存、消息队列专题  ashishps1/awesome-system-design-resources 英文 第三方 仓库"><td><a href="https://github.com/ashishps1/awesome-system-design-resources">ashishps1/awesome-system-design-resources</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">43.4k</td><td>系统设计精选资源清单，含关键概念、高可用、数据库、缓存、消息队列专题</td></tr>
+<tr data-t="community" data-f="book" data-zh="0" data-new="0" data-c="classics" data-sc="8" data-s="the architecture of open source applications 50 位作者解析 25+ 开源项目架构：nginx/postgresql/llvm/git，从实战看真实架构决策   英文 第三方 书"><td><a href="https://aosabook.org/en/index.html">The Architecture of Open Source Applications</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">书</span></td><td class="hide-sm">英文</td><td class="n">—</td><td>50 位作者解析 25+ 开源项目架构：Nginx/PostgreSQL/LLVM/Git，从实战看真实架构决策</td></tr>
+<tr data-t="community" data-f="book" data-zh="1" data-new="0" data-c="classics" data-sc="7" data-s="系统设计面试内幕指南 系统设计面试经典案例中文版：url 缩短、通知系统、新闻订阅、聊天系统等 15 个案例   中文 第三方 书"><td><a href="https://learning-guide.gitbook.io/system-design-interview">系统设计面试内幕指南</a> <span class="sc-badge" title="评分 7/10">★☆☆ 收录</span></td><td class="">第三方<span class="fmt">书</span></td><td class="hide-sm">中文</td><td class="n">—</td><td>系统设计面试经典案例中文版：URL 缩短、通知系统、新闻订阅、聊天系统等 15 个案例</td></tr>
+<tr data-t="community" data-f="book" data-zh="1" data-new="0" data-c="classics" data-sc="8" data-s="深入架构原理与实践 覆盖网络/可观测/容器/微服务/存储/安全的中文体系化架构书，作者来自腾讯/字节   中文 第三方 书"><td><a href="https://www.thebyte.com.cn/">深入架构原理与实践</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">书</span></td><td class="hide-sm">中文</td><td class="n">—</td><td>覆盖网络/可观测/容器/微服务/存储/安全的中文体系化架构书，作者来自腾讯/字节</td></tr>
+<tr class="cat" data-c="patterns"><td colspan="5">架构模式与原则<span class="cnt">7</span></td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="patterns" data-sc="9" data-s="mehdihadeli/awesome-software-architecture 最全架构学习清单：单体/微服务/eda/ddd/cqrs/saga/六边形架构，含 ai 专节（rag/mcp/agent）  mehdihadeli/awesome-software-architecture 英文 第三方 仓库"><td><a href="https://github.com/mehdihadeli/awesome-software-architecture">mehdihadeli/awesome-software-architecture</a> <span class="pick">★推荐</span> <span class="sc-badge" title="评分 9/10">★★★ 顶级</span> · <a href="https://awesome-architecture.com">网站</a></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">11.8k</td><td>最全架构学习清单：单体/微服务/EDA/DDD/CQRS/Saga/六边形架构，含 AI 专节（RAG/MCP/Agent）</td></tr>
+<tr data-t="official" data-f="website" data-zh="0" data-new="0" data-c="patterns" data-sc="9" data-s="the c4 model simon brown 创建的软件可视化框架，4 层抽象（系统/容器/组件/代码），行业标准   英文 官方 网站"><td><a href="https://c4model.com/">The C4 model</a> <span class="pick">★推荐</span> <span class="sc-badge" title="评分 9/10">★★★ 顶级</span></td><td class="t-off">官方<span class="fmt">网站</span></td><td class="hide-sm">英文</td><td class="n">—</td><td>Simon Brown 创建的软件可视化框架，4 层抽象（系统/容器/组件/代码），行业标准</td></tr>
+<tr data-t="community" data-f="repo" data-zh="1" data-new="0" data-c="patterns" data-sc="8" data-s="nusr/hacker-laws-zh 康威定律、墨菲定律、帕金森定律等 60+ 软件定律的中文解释，架构思维基础 原仓库 2023 年后无新提交，内容仍有效，属常青资料 nusr/hacker-laws-zh 中文 第三方 仓库"><td><a href="https://github.com/nusr/hacker-laws-zh">nusr/hacker-laws-zh</a> <span class="badge warn">久未更新</span> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span><div class="note-sm">原仓库 2023 年后无新提交，内容仍有效，属常青资料</div></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">中文</td><td class="n">12.5k</td><td>康威定律、墨菲定律、帕金森定律等 60+ 软件定律的中文解释，架构思维基础</td></tr>
+<tr data-t="community" data-f="website" data-zh="0" data-new="0" data-c="patterns" data-sc="8" data-s="the twelve-factor app heroku 总结的 saas 应用 12 条方法论，30 分钟读完，每条规则是面试考点和设计基准   英文 第三方 网站"><td><a href="https://12factor.net/">The Twelve-Factor App</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">网站</span></td><td class="hide-sm">英文</td><td class="n">—</td><td>Heroku 总结的 SaaS 应用 12 条方法论，30 分钟读完，每条规则是面试考点和设计基准</td></tr>
+<tr data-t="community" data-f="article" data-zh="1" data-new="0" data-c="patterns" data-sc="8" data-s="我做系统架构的一些原则 陈皓总结的系统架构原则：异步/幂等/cqrs/分布式服务，简洁精炼，经历多年仍不过时   中文 第三方 文章"><td><a href="https://coolshell.cn/articles/21672.html">我做系统架构的一些原则</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">文章</span></td><td class="hide-sm">中文</td><td class="n">—</td><td>陈皓总结的系统架构原则：异步/幂等/CQRS/分布式服务，简洁精炼，经历多年仍不过时</td></tr>
+<tr data-t="community" data-f="website" data-zh="0" data-new="0" data-c="patterns" data-sc="7" data-s="业务逻辑拆分模式 业务逻辑拆分可视化指南：事务脚本/领域模型/表模块的场景对比和迁移路径   中英文 第三方 网站"><td><a href="https://autonomy.design/">业务逻辑拆分模式</a> <span class="sc-badge" title="评分 7/10">★☆☆ 收录</span></td><td class="">第三方<span class="fmt">网站</span></td><td class="hide-sm">中英文</td><td class="n">—</td><td>业务逻辑拆分可视化指南：事务脚本/领域模型/表模块的场景对比和迁移路径</td></tr>
+<tr data-t="community" data-f="article" data-zh="0" data-new="0" data-c="patterns" data-sc="7" data-s="revisiting the outbox pattern 深度复盘 outbox pattern：事件驱动架构中保证消息可靠投递的权威实现，含多种变体对比   英文 第三方 文章"><td><a href="https://www.decodable.co/blog/revisiting-the-outbox-pattern">Revisiting the Outbox Pattern</a> <span class="sc-badge" title="评分 7/10">★☆☆ 收录</span></td><td class="">第三方<span class="fmt">文章</span></td><td class="hide-sm">英文</td><td class="n">—</td><td>深度复盘 Outbox Pattern：事件驱动架构中保证消息可靠投递的权威实现，含多种变体对比</td></tr>
+<tr class="cat" data-c="distributed"><td colspan="5">分布式系统<span class="cnt">5</span></td></tr>
+<tr data-t="community" data-f="book" data-zh="1" data-new="0" data-c="distributed" data-sc="9" data-s="凤凰架构：构筑可靠的大型分布式系统 周志明著。从单体到微服务到无服务，完整覆盖分布式事务/服务网格/可观测性/安全，配套 fenix 项目   中文 第三方 书"><td><a href="https://icyfenix.cn/">凤凰架构：构筑可靠的大型分布式系统</a> <span class="pick">★推荐</span> <span class="sc-badge" title="评分 9/10">★★★ 顶级</span></td><td class="">第三方<span class="fmt">书</span></td><td class="hide-sm">中文</td><td class="n">—</td><td>周志明著。从单体到微服务到无服务，完整覆盖分布式事务/服务网格/可观测性/安全，配套 Fenix 项目</td></tr>
+<tr data-t="community" data-f="website" data-zh="1" data-new="0" data-c="distributed" data-sc="9" data-s="ddia 逐章精读 《designing data-intensive applications》逐章精读与批注，附思维导图和要点总结，中文免费版   中文 第三方 网站"><td><a href="https://ddia.qtmuniao.com/">DDIA 逐章精读</a> <span class="pick">★推荐</span> <span class="sc-badge" title="评分 9/10">★★★ 顶级</span></td><td class="">第三方<span class="fmt">网站</span></td><td class="hide-sm">中文</td><td class="n">—</td><td>《Designing Data-Intensive Applications》逐章精读与批注，附思维导图和要点总结，中文免费版</td></tr>
+<tr data-t="community" data-f="book" data-zh="1" data-new="0" data-c="distributed" data-sc="7" data-s="云原生架构笔记 从 docker/kubernetes 到服务网格和可观测性的系统性云原生架构笔记   中文 第三方 书"><td><a href="https://zouyingjie.github.io/cloudnativenotes/end/about.html">云原生架构笔记</a> <span class="sc-badge" title="评分 7/10">★☆☆ 收录</span></td><td class="">第三方<span class="fmt">书</span></td><td class="hide-sm">中文</td><td class="n">—</td><td>从 Docker/Kubernetes 到服务网格和可观测性的系统性云原生架构笔记</td></tr>
+<tr data-t="community" data-f="article" data-zh="1" data-new="0" data-c="distributed" data-sc="7" data-s="如何选择分布式事务形态 对比 tcc/saga/2pc/补偿/基于消息最终一致性的选型依据，含适用场景和性能代价   中文 第三方 文章"><td><a href="https://www.cnblogs.com/skyesx/p/9697817.html">如何选择分布式事务形态</a> <span class="sc-badge" title="评分 7/10">★☆☆ 收录</span></td><td class="">第三方<span class="fmt">文章</span></td><td class="hide-sm">中文</td><td class="n">—</td><td>对比 TCC/SAGA/2PC/补偿/基于消息最终一致性的选型依据，含适用场景和性能代价</td></tr>
+<tr data-t="community" data-f="newsletter" data-zh="1" data-new="0" data-c="distributed" data-sc="7" data-s="系统日知录 分布式系统与架构原理精读 newsletter，深度解析 raft/paxos/spanner/dynamodb 等经典论文 付费订阅，可免费预览部分内容  中文 第三方 newsletter"><td><a href="https://xiaobot.net/p/system-thinking">系统日知录</a> <span class="sc-badge" title="评分 7/10">★☆☆ 收录</span><div class="note-sm">付费订阅，可免费预览部分内容</div></td><td class="">第三方<span class="fmt">Newsletter</span></td><td class="hide-sm">中文</td><td class="n">—</td><td>分布式系统与架构原理精读 Newsletter，深度解析 Raft/Paxos/Spanner/DynamoDB 等经典论文</td></tr>
+<tr class="cat" data-c="ddd"><td colspan="5">DDD 与领域建模<span class="cnt">3</span></td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="ddd" data-sc="8" data-s="kgrzybek/modular-monolith-with-ddd 完整 ddd 模块化单体参考实现：bounded context/cqrs/event sourcing/unit of work，c# 实现但设计通用  kgrzybek/modular-monolith-with-ddd 英文 第三方 仓库"><td><a href="https://github.com/kgrzybek/modular-monolith-with-ddd">kgrzybek/modular-monolith-with-ddd</a> <span class="badge warn">久未更新</span> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">14.1k</td><td>完整 DDD 模块化单体参考实现：Bounded Context/CQRS/Event Sourcing/Unit of Work，C# 实现但设计通用</td></tr>
+<tr data-t="community" data-f="book" data-zh="1" data-new="0" data-c="ddd" data-sc="8" data-s="《软件设计的哲学》中文版 ousterhout 力作：深模块 vs 浅模块、设计两次、注释的本质。对模块界面和领域边界设计有直接指导   中文 第三方 书"><td><a href="https://cactus-proj.github.io/A-Philosophy-of-Software-Design-zh/">《软件设计的哲学》中文版</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">书</span></td><td class="hide-sm">中文</td><td class="n">—</td><td>Ousterhout 力作：深模块 vs 浅模块、设计两次、注释的本质。对模块界面和领域边界设计有直接指导</td></tr>
+<tr data-t="community" data-f="article" data-zh="1" data-new="0" data-c="ddd" data-sc="8" data-s="ddd 在大众点评交易系统演进中的应用 美团技术团队：从贫血模型到 ddd 的真实演进，含聚合根设计、防腐层和 anti-corruption layer 实践   中文 第三方 文章"><td><a href="https://tech.meituan.com/2024/05/09/DDD-Practice-Trading-System.html">DDD 在大众点评交易系统演进中的应用</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">文章</span></td><td class="hide-sm">中文</td><td class="n">—</td><td>美团技术团队：从贫血模型到 DDD 的真实演进，含聚合根设计、防腐层和 Anti-Corruption Layer 实践</td></tr>
+<tr class="cat" data-c="adr"><td colspan="5">架构决策记录（ADR）<span class="cnt">4</span></td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="adr" data-sc="9" data-s="joelparkerhenderson/architecture-decision-record adr 模板最全参考：nygard/madr/business case/planguage/itd 多种模板，含示例与工具链  architecture-decision-record/architecture-decision-record 英文 第三方 仓库"><td><a href="https://github.com/architecture-decision-record/architecture-decision-record">joelparkerhenderson/architecture-decision-record</a> <span class="pick">★推荐</span> <span class="sc-badge" title="评分 9/10">★★★ 顶级</span></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">17.5k</td><td>ADR 模板最全参考：Nygard/MADR/Business Case/Planguage/ITD 多种模板，含示例与工具链</td></tr>
+<tr data-t="academic" data-f="paper" data-zh="0" data-new="0" data-c="adr" data-sc="8" data-s="rediscovering adrs for llm code generation 实证研究：adr 作为设计记忆经 mcp 注入，使 llm 开发时长降 ~10–15%，工具调用降 11%，并自发生成 e2e 测试   英文 学术 论文"><td><a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.177205025.54351571/v2">Rediscovering ADRs for LLM Code Generation</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">学术<span class="fmt">论文</span></td><td class="hide-sm">英文</td><td class="n">—</td><td>实证研究：ADR 作为设计记忆经 MCP 注入，使 LLM 开发时长降 ~10–15%，工具调用降 11%，并自发生成 E2E 测试</td></tr>
+<tr data-t="community" data-f="article" data-zh="0" data-new="0" data-c="adr" data-sc="8" data-s="when architecture decisions actually apply o&#x27;reilly radar：区分 adr 的检索与适用性，警告多 adr 合并上下文导致&#x27;权威扁平化&#x27;，附 ai 时代治理建议   英文 第三方 文章"><td><a href="https://www.oreilly.com/radar/when-architecture-decisions-actually-apply/">When Architecture Decisions Actually Apply</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">文章</span></td><td class="hide-sm">英文</td><td class="n">—</td><td>O&#x27;Reilly Radar：区分 ADR 的检索与适用性，警告多 ADR 合并上下文导致&#x27;权威扁平化&#x27;，附 AI 时代治理建议</td></tr>
+<tr data-t="community" data-f="article" data-zh="0" data-new="0" data-c="adr" data-sc="7" data-s="architectural governance at ai speed infoq：ai 加速开发下如何维护架构治理，讨论 adr 自动化执行、架构飘移检测与 llm 辅助 adr 写作   英文 第三方 文章"><td><a href="https://www.infoq.com/articles/architectural-governance-ai-speed/">Architectural Governance at AI Speed</a> <span class="sc-badge" title="评分 7/10">★☆☆ 收录</span></td><td class="">第三方<span class="fmt">文章</span></td><td class="hide-sm">英文</td><td class="n">—</td><td>InfoQ：AI 加速开发下如何维护架构治理，讨论 ADR 自动化执行、架构飘移检测与 LLM 辅助 ADR 写作</td></tr>
+<tr class="cat" data-c="ai-arch"><td colspan="5">AI 时代架构<span class="cnt">12</span></td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="ai-arch" data-sc="9" data-s="nirdiamant/rag_techniques 30k★。20+ rag 技术的 notebook 教程：基础检索、混合检索、重排序、上下文压缩、self-rag、graphrag  nirdiamant/rag_techniques 英文 第三方 仓库"><td><a href="https://github.com/NirDiamant/RAG_Techniques">NirDiamant/RAG_Techniques</a> <span class="pick">★推荐</span> <span class="sc-badge" title="评分 9/10">★★★ 顶级</span></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">30.3k</td><td>30k★。20+ RAG 技术的 notebook 教程：基础检索、混合检索、重排序、上下文压缩、Self-RAG、GraphRAG</td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="ai-arch" data-sc="9" data-s="study8677/awesome-architecture ai 时代架构优先系统设计：26 篇双语教程、25 个模板、6 个端到端案例（rag/agent/feed/实时协作）  study8677/awesome-architecture 中英文 第三方 仓库"><td><a href="https://github.com/study8677/awesome-architecture">study8677/awesome-architecture</a> <span class="pick">★推荐</span> <span class="sc-badge" title="评分 9/10">★★★ 顶级</span> · <a href="https://study8677.github.io/awesome-architecture/">在线阅读</a></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">中英文</td><td class="n">2.5k</td><td>AI 时代架构优先系统设计：26 篇双语教程、25 个模板、6 个端到端案例（RAG/Agent/Feed/实时协作）</td></tr>
+<tr data-t="official" data-f="course" data-zh="1" data-new="0" data-c="ai-arch" data-sc="8" data-s="microsoft/generative-ai-for-beginners 123k★。微软 21 课官方课程：提示工程/rag/agent/函数调用/伦理，配 azure openai 实操  microsoft/generative-ai-for-beginners 多语（含中文） 官方 课程"><td><a href="https://github.com/microsoft/generative-ai-for-beginners">microsoft/generative-ai-for-beginners</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="t-off">官方<span class="fmt">课程</span></td><td class="hide-sm">多语（含中文）</td><td class="n">123.5k</td><td>123k★。微软 21 课官方课程：提示工程/RAG/Agent/函数调用/伦理，配 Azure OpenAI 实操</td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="ai-arch" data-sc="8" data-s="chroma-core/chroma 30k★。开源向量数据库 ai 原生存储层：embedding 存储/相似度检索/元数据过滤，rag 系统首选  chroma-core/chroma 英文 第三方 仓库"><td><a href="https://github.com/chroma-core/chroma">chroma-core/chroma</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span> · <a href="https://docs.trychroma.com/">文档</a></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">29.7k</td><td>30k★。开源向量数据库 AI 原生存储层：embedding 存储/相似度检索/元数据过滤，RAG 系统首选</td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="ai-arch" data-sc="9" data-s="nirdiamant/genai_agents 25k★。50+ ai agent 实现教程：从对话机器人到多智能体协调，每个模式配 notebook 与设计权衡说明  nirdiamant/genai_agents 英文 第三方 仓库"><td><a href="https://github.com/NirDiamant/GenAI_Agents">NirDiamant/GenAI_Agents</a> <span class="sc-badge" title="评分 9/10">★★★ 顶级</span></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">25.0k</td><td>25k★。50+ AI Agent 实现教程：从对话机器人到多智能体协调，每个模式配 notebook 与设计权衡说明</td></tr>
+<tr data-t="official" data-f="repo" data-zh="0" data-new="0" data-c="ai-arch" data-sc="8" data-s="microsoft/promptflow 11k★。微软 llm 应用工程框架：从原型/评估到生产部署与监控的可观测性工具链  microsoft/promptflow 英文 官方 仓库"><td><a href="https://github.com/microsoft/promptflow">microsoft/promptflow</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span> · <a href="https://microsoft.github.io/promptflow/">文档</a></td><td class="t-off">官方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">11.3k</td><td>11k★。微软 LLM 应用工程框架：从原型/评估到生产部署与监控的可观测性工具链</td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="ai-arch" data-sc="7" data-s="alexey-popov/awesome-ai-architect ai 架构师精选资源：ai 架构模式、genai 系统设计面试、adr 实践、认证与课程  alexey-popov/awesome-ai-architect 英文 第三方 仓库"><td><a href="https://github.com/Alexey-Popov/awesome-ai-architect">Alexey-Popov/awesome-ai-architect</a> <span class="sc-badge" title="评分 7/10">★☆☆ 收录</span></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">240</td><td>AI 架构师精选资源：AI 架构模式、GenAI 系统设计面试、ADR 实践、认证与课程</td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="ai-arch" data-sc="8" data-s="alirezadir/agentic-ai-systems 生产级 ai agent 系统设计：编排/状态/记忆/可观测性/成本控制/mcp/a2a，2026 年持续更新  alirezadir/agentic-ai-systems 英文 第三方 仓库"><td><a href="https://github.com/alirezadir/Agentic-AI-Systems">alirezadir/Agentic-AI-Systems</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">—</td><td>生产级 AI Agent 系统设计：编排/状态/记忆/可观测性/成本控制/MCP/A2A，2026 年持续更新</td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="ai-arch" data-sc="8" data-s="ombharatiya/ai-system-design-guide 生产级 llm/rag 系统设计：116 道面试题 + 15 个真实案例（权限感知 rag/多租户微调/推理网关）  ombharatiya/ai-system-design-guide 英文 第三方 仓库"><td><a href="https://github.com/ombharatiya/ai-system-design-guide">ombharatiya/ai-system-design-guide</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">—</td><td>生产级 LLM/RAG 系统设计：116 道面试题 + 15 个真实案例（权限感知 RAG/多租户微调/推理网关）</td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="ai-arch" data-sc="8" data-s="reaatech/agentic-arch-patterns 35 个 agentic 架构模式目录（协调/可靠性/状态/安全/性能/可观测性），每个含问题陈述和可运行 ts 示例  reaatech/agentic-arch-patterns 英文 第三方 仓库"><td><a href="https://github.com/reaatech/agentic-arch-patterns">reaatech/agentic-arch-patterns</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">—</td><td>35 个 Agentic 架构模式目录（协调/可靠性/状态/安全/性能/可观测性），每个含问题陈述和可运行 TS 示例</td></tr>
+<tr data-t="academic" data-f="paper" data-zh="0" data-new="0" data-c="ai-arch" data-sc="8" data-s="a practical guide for production-grade agentic ai workflows arxiv 2512.08769：生产级 agentic 工作流九原则，含工具选择/上下文管理/可靠性/评估方法   英文 学术 论文"><td><a href="https://arxiv.org/abs/2512.08769">A Practical Guide for Production-Grade Agentic AI Workflows</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">学术<span class="fmt">论文</span></td><td class="hide-sm">英文</td><td class="n">—</td><td>arXiv 2512.08769：生产级 Agentic 工作流九原则，含工具选择/上下文管理/可靠性/评估方法</td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="ai-arch" data-sc="9" data-s="berriai/litellm 生产级 llm 网关：统一 100+ 模型 api、负载均衡、降级、成本追踪、速率限制，ai 时代模型网关标准实现  berriai/litellm 英文 第三方 仓库"><td><a href="https://github.com/BerriAI/litellm">BerriAI/litellm</a> <span class="sc-badge" title="评分 9/10">★★★ 顶级</span> · <a href="https://docs.litellm.ai/">文档</a></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">—</td><td>生产级 LLM 网关：统一 100+ 模型 API、负载均衡、降级、成本追踪、速率限制，AI 时代模型网关标准实现</td></tr>
+<tr class="cat" data-c="tools"><td colspan="5">架构工具与辅助网站<span class="cnt">3</span></td></tr>
+<tr data-t="community" data-f="repo" data-zh="0" data-new="0" data-c="tools" data-sc="8" data-s="plantuml-stdlib/c4-plantuml 用 plantuml 语法绘制 c4 模型图，支持 context/container/component/dynamic 四种视图，ci 友好  plantuml-stdlib/c4-plantuml 英文 第三方 仓库"><td><a href="https://github.com/plantuml-stdlib/C4-PlantUML">plantuml-stdlib/C4-PlantUML</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">仓库</span></td><td class="hide-sm">英文</td><td class="n">7.5k</td><td>用 PlantUML 语法绘制 C4 模型图，支持 Context/Container/Component/Dynamic 四种视图，CI 友好</td></tr>
+<tr data-t="community" data-f="website" data-zh="0" data-new="0" data-c="tools" data-sc="8" data-s="draw.io（diagrams.net） 免费在线/桌面架构图工具，支持 c4/uml/bpmn/云图，可导出 svg/png，支持 github 存储   中英文 第三方 网站"><td><a href="https://www.drawio.com/">draw.io（diagrams.net）</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">网站</span></td><td class="hide-sm">中英文</td><td class="n">—</td><td>免费在线/桌面架构图工具，支持 C4/UML/BPMN/云图，可导出 SVG/PNG，支持 GitHub 存储</td></tr>
+<tr data-t="community" data-f="website" data-zh="0" data-new="0" data-c="tools" data-sc="8" data-s="structurizr architecture as code：用 structurizr dsl 描述 c4 模型，自动渲染多视图架构图，支持本地/云端   英文 第三方 网站"><td><a href="https://structurizr.com/">Structurizr</a> <span class="sc-badge" title="评分 8/10">★★☆ 推荐</span></td><td class="">第三方<span class="fmt">网站</span></td><td class="hide-sm">英文</td><td class="n">—</td><td>Architecture as Code：用 Structurizr DSL 描述 C4 模型，自动渲染多视图架构图，支持本地/云端</td></tr>
+</tbody></table></div>
+<p id="empty" class="empty" hidden>没有匹配的资料。换个关键词，或取消筛选。</p>
+<p class="note">★ 为 GitHub Star 数，每周自动刷新，仅代表热度。评分（★★★/★★☆/★☆☆/☆☆☆）由维护者按内容质量、来源可信度、维护状态、独特性四维度人工评定，满分 10，≥ 7 收录，详见<a href="about.html#rating">关于页评分标准</a>。"久未更新"= 超过一年无提交；"链接失效"= 连续两次检查失败，下次更新时会被替换或移除。</p>
+<footer>最近更新：2026-11-15 · 每周一自动检索新资料、核对链接、审核后发布 ·
+<a href="changelog.html">更新日志</a> · <a href="feed.xml">RSS</a> · <a href="https://github.com/hustlyt/architecture-guide">源码与数据</a></footer>
+</div>
+<script>
+(function(){
+  const q=document.getElementById('q'); if(!q) return;
+  const rows=[...document.querySelectorAll('#reftbl tbody tr')];
+  const items=rows.filter(r=>!r.classList.contains('cat'));
+  const cnt=document.getElementById('count'), empty=document.getElementById('empty');
+  let key='all', cat='';
+  function ok(r){
+    if(cat && r.dataset.c!==cat) return false;
+    if(key==='all') return true;
+    if(key==='zh') return r.dataset.zh==='1';
+    if(key==='new') return r.dataset.new==='1';
+    const [k,v]=key.split(':');
+    if(k==='sc') return parseInt(r.dataset.sc||0)>=parseInt(v);
+    return r.dataset[k]===v;
+  }
+  function apply(){
+    const words=q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    let n=0;
+    items.forEach(r=>{
+      const show=ok(r)&&words.every(w=>r.dataset.s.includes(w));
+      r.style.display=show?'':'none'; if(show) n++;
+    });
+    rows.forEach((r,i)=>{ if(!r.classList.contains('cat')) return; let j=i+1,any=false;
+      while(j<rows.length&&!rows[j].classList.contains('cat')){ if(rows[j].style.display!=='none') any=true; j++; }
+      r.style.display=any?'':'none';
+      const k=r.querySelector('.cnt'); if(k){ let m=0; for(let t=i+1;t<rows.length&&!rows[t].classList.contains('cat');t++) if(rows[t].style.display!=='none') m++; k.textContent=m; } });
+    cnt.textContent='显示 '+n+' / '+items.length+' 条';
+    empty.hidden=n>0;
+    const u=new URL(location); q.value?u.searchParams.set('q',q.value):u.searchParams.delete('q');
+    history.replaceState(null,'',u);
+  }
+  document.querySelectorAll('#filters button').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('#filters button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); key=b.dataset.k; apply(); }));
+  const cb=[...document.querySelectorAll('#catfilters button')];
+  cb.forEach(b=>b.addEventListener('click',()=>{
+    const on=b.classList.contains('on'); cb.forEach(x=>x.classList.remove('on'));
+    cat=on?'':b.dataset.k.slice(2); if(!on) b.classList.add('on'); apply(); }));
+  q.addEventListener('input',apply);
+  document.addEventListener('keydown',ev=>{ if(ev.key==='/'&&document.activeElement!==q){ev.preventDefault();q.focus();} });
+  const init=new URL(location).searchParams.get('q'); if(init) q.value=init;
+  apply();
+})();
+</script></body></html>

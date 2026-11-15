@@ -1,0 +1,118 @@
+{
+ "_doc": "discover.py 的数据源。keywords 用于过滤 RSS/HN/Reddit 条目（标题或摘要命中任一即保留）。新增或删除数据源只需改这里。pages 类数据源没有日期，只按标题关键词过滤，并依赖 reviewed.json 去重。GitHub 搜索按 2.2 秒间隔串行，避免触发 30 次/分钟限制。",
+ "lookback_days": 21,
+ "keywords": [
+  "architecture",
+  "system design",
+  "软件架构",
+  "系统设计",
+  "architecture decision",
+  "ADR",
+  "microservices",
+  "微服务",
+  "distributed systems",
+  "分布式",
+  "domain driven design",
+  "DDD",
+  "CQRS",
+  "event sourcing",
+  "event-driven",
+  "事件驱动",
+  "clean architecture",
+  "hexagonal",
+  "C4 model",
+  "12factor",
+  "cloud native",
+  "云原生",
+  "AI architecture",
+  "AI-native",
+  "RAG architecture",
+  "agent architecture",
+  "LLM system design",
+  "模型网关",
+  "向量数据库",
+  "consistency",
+  "scalability",
+  "resilience",
+  "trade-off"
+ ],
+ "github": {
+  "min_stars": 100,
+  "queries": [
+   "software architecture tutorial",
+   "system design course",
+   "architecture decision record",
+   "awesome software architecture",
+   "microservices architecture tutorial",
+   "domain driven design example",
+   "distributed systems tutorial",
+   "CQRS event sourcing tutorial",
+   "clean architecture example",
+   "cloud native architecture",
+   "AI system architecture",
+   "RAG system design",
+   "AI native architecture",
+   "LLM system design",
+   "软件架构 教程",
+   "系统设计 教程",
+   "分布式系统 教程",
+   "架构设计 实践",
+   "微服务 架构",
+   "architecture design guide"
+  ]
+ },
+ "feeds": [
+  {
+   "name": "Martin Fowler Blog",
+   "url": "https://martinfowler.com/feed.atom",
+   "type": "community"
+  },
+  {
+   "name": "High Scalability",
+   "url": "http://feeds.feedburner.com/HighScalability",
+   "type": "community"
+  },
+  {
+   "name": "InfoQ Architecture",
+   "url": "https://feed.infoq.com/",
+   "type": "community"
+  },
+  {
+   "name": "美团技术团队",
+   "url": "https://tech.meituan.com/feed/",
+   "type": "community"
+  },
+  {
+   "name": "字节跳动技术团队",
+   "url": "https://juejin.cn/team/6930507995474313230/posts/rss",
+   "type": "community"
+  },
+  {
+   "name": "O'Reilly Radar",
+   "url": "https://www.oreilly.com/radar/topics/architecture/feed/",
+   "type": "community"
+  },
+  {
+   "name": "The Pragmatic Engineer",
+   "url": "https://newsletter.pragmaticengineer.com/feed",
+   "type": "community"
+  },
+  {
+   "name": "arXiv cs.SE",
+   "url": "https://arxiv.org/rss/cs.SE",
+   "type": "academic"
+  }
+ ],
+ "pages": [
+  {
+   "name": "awesome-software-architecture topics",
+   "url": "https://github.com/mehdihadeli/awesome-software-architecture",
+   "type": "community"
+  },
+  {
+   "name": "awesome-architecture topics",
+   "url": "https://github.com/study8677/awesome-architecture",
+   "type": "community"
+  }
+ ]
+}

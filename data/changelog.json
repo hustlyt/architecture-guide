@@ -1,0 +1,20 @@
+[
+ {
+  "date": "2026-11-15",
+  "summary": "初始收录 30 条资源，覆盖经典系统设计、架构模式、分布式、DDD、ADR、AI 时代架构",
+  "stats": {"新增": 30},
+  "added": [
+   "system-design-primer","system-design-101","awesome-system-design-resources","aosabook",
+   "system-design-interview-gitbook","thebyte-arch",
+   "c4model","12factor","awesome-software-architecture","hacker-laws-zh",
+   "coolshell-arch-principles","autonomy-design","outbox-pattern",
+   "fenix-arch","ddia-read","cloudnative-notes","distributed-tx-choice","system-thinking-newsletter",
+   "modular-monolith-ddd","philosophy-of-software-design-zh","meituan-ddd",
+   "joelparkerhenderson-adr","adr-llm-techrxiv","oreilly-adr-applicability","infoq-adr-ai-speed",
+   "awesome-architecture-ai","awesome-ai-architect",
+   "drawio","structurizr","c4-plantuml"
+  ],
+  "initial": true,
+  "guide_changes": []
+ }
+]

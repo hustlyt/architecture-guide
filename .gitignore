@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+work/check-report.md
+work/candidates.json
+work/candidates.md
