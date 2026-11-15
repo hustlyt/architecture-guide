@@ -1,18 +1,85 @@
 [
  {
   "date": "2026-11-15",
-  "summary": "初始收录 30 条资源，覆盖经典系统设计、架构模式、分布式、DDD、ADR、AI 时代架构",
-  "stats": {"新增": 30},
+  "summary": "新增5条AI架构/分布式实践资料，移除2条失效链接，修复discover.py配置缺失bug",
+  "stats": {
+   "候选": 59,
+   "审核": 13,
+   "新增": 5
+  },
   "added": [
-   "system-design-primer","system-design-101","awesome-system-design-resources","aosabook",
-   "system-design-interview-gitbook","thebyte-arch",
-   "c4model","12factor","awesome-software-architecture","hacker-laws-zh",
-   "coolshell-arch-principles","autonomy-design","outbox-pattern",
-   "fenix-arch","ddia-read","cloudnative-notes","distributed-tx-choice","system-thinking-newsletter",
-   "modular-monolith-ddd","philosophy-of-software-design-zh","meituan-ddd",
-   "joelparkerhenderson-adr","adr-llm-techrxiv","oreilly-adr-applicability","infoq-adr-ai-speed",
-   "awesome-architecture-ai","awesome-ai-architect",
-   "drawio","structurizr","c4-plantuml"
+   "fowler-orchestrator-tax",
+   "fowler-durable-execution-agents",
+   "fowler-harness-engineering",
+   "fowler-reliable-llm-bayer",
+   "meituan-ai-coding-distributed"
+  ],
+  "changed": [
+   {
+    "id": "system-design-101",
+    "title": "ByteByteGoHq/system-design-101",
+    "reason": "超过一年未推送，标注 evergreen"
+   },
+   {
+    "id": "hacker-laws-zh",
+    "title": "nusr/hacker-laws-zh",
+    "reason": "超过一年未推送，经典规范类标注 evergreen"
+   },
+   {
+    "id": "modular-monolith-ddd",
+    "title": "kgrzybek/modular-monolith-with-ddd",
+    "reason": "超过一年未推送，参考实现标注 evergreen"
+   }
+  ],
+  "removed": [
+   {
+    "id": "coolshell-arch-principles",
+    "title": "我做系统架构的一些原则",
+    "reason": "HTTP 522，连续3次失败，coolshell.cn 长期不可访问"
+   },
+   {
+    "id": "autonomy-design",
+    "title": "业务逻辑拆分模式",
+    "reason": "SSL 握手失败，域名无法访问"
+   }
+  ],
+  "guide_changes": []
+ },
+ {
+  "date": "2026-11-15",
+  "summary": "初始收录 30 条资源，覆盖经典系统设计、架构模式、分布式、DDD、ADR、AI 时代架构",
+  "stats": {
+   "新增": 30
+  },
+  "added": [
+   "system-design-primer",
+   "system-design-101",
+   "awesome-system-design-resources",
+   "aosabook",
+   "system-design-interview-gitbook",
+   "thebyte-arch",
+   "c4model",
+   "12factor",
+   "awesome-software-architecture",
+   "hacker-laws-zh",
+   "outbox-pattern",
+   "fenix-arch",
+   "ddia-read",
+   "cloudnative-notes",
+   "distributed-tx-choice",
+   "system-thinking-newsletter",
+   "modular-monolith-ddd",
+   "philosophy-of-software-design-zh",
+   "meituan-ddd",
+   "joelparkerhenderson-adr",
+   "adr-llm-techrxiv",
+   "oreilly-adr-applicability",
+   "infoq-adr-ai-speed",
+   "awesome-architecture-ai",
+   "awesome-ai-architect",
+   "drawio",
+   "structurizr",
+   "c4-plantuml"
   ],
   "initial": true,
   "guide_changes": []

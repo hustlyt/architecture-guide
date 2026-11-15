@@ -195,7 +195,8 @@ def main() -> int:
         jobs.append(ex.submit(from_github, cfg["github"], since))
         jobs += [ex.submit(from_feed, f, kws, since) for f in cfg["feeds"]]
         jobs += [ex.submit(from_page, p, kws) for p in cfg["pages"]]
-        jobs.append(ex.submit(from_hn, cfg["hackernews"], since_ts, kws))
+        if "hackernews" in cfg:
+            jobs.append(ex.submit(from_hn, cfg["hackernews"], since_ts, kws))
         jobs.append(ex.submit(from_arxiv, cfg["arxiv"], since))
         raw = [c for j in jobs for c in j.result()]
 

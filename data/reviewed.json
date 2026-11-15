@@ -1,1 +1,80 @@
-{}
+{
+ "martinfowler.com/articles/orchestrator-tax.html": {
+  "date": "2026-11-15",
+  "decision": "accept",
+  "score": 9,
+  "reason": "MF原创，Agent编排上下文污染，cognitive locality概念扎实"
+ },
+ "martinfowler.com/articles/durable-execution-agents.html": {
+  "date": "2026-11-15",
+  "decision": "accept",
+  "score": 10,
+  "reason": "持久执行Agent，8种失败模式，Temporal/CF对比，满分"
+ },
+ "martinfowler.com/articles/harness-engineering.html": {
+  "date": "2026-11-15",
+  "decision": "accept",
+  "score": 9,
+  "reason": "Harness工程方法论，guides+sensors框架，架构适应度函数"
+ },
+ "martinfowler.com/articles/reliable-llm-bayer.html": {
+  "date": "2026-11-15",
+  "decision": "accept",
+  "score": 8,
+  "reason": "可靠LLM Agent系统，ThoughtWorks实践"
+ },
+ "tech.meituan.com/2026/10/29/ai-coding-in-distributed-storage-system.html": {
+  "date": "2026-11-15",
+  "decision": "accept",
+  "score": 7,
+  "reason": "美团分布式存储AI Coding边界实践，真实案例"
+ },
+ "arxiv.org/abs/2604.01395": {
+  "date": "2026-11-15",
+  "decision": "reject",
+  "score": 6,
+  "reason": "ICSA poster track，篇幅有限深度不足，无零引用"
+ },
+ "autonomy.design": {
+  "date": "2026-11-15",
+  "decision": "reject",
+  "score": 0,
+  "reason": "SSL失效，域名无法访问"
+ },
+ "coolshell.cn/articles/21672.html": {
+  "date": "2026-11-15",
+  "decision": "reject",
+  "score": 0,
+  "reason": "HTTP 522 Cloudflare错误，连续3次失败"
+ },
+ "hn.algolia.com": {
+  "date": "2026-11-15",
+  "decision": "reject",
+  "score": 0,
+  "reason": "HN搜索无对应hackernews配置"
+ },
+ "npm.meza.adr-tools": {
+  "date": "2026-11-15",
+  "decision": "reject",
+  "score": 4,
+  "reason": "工具本身非学习材料，非业界标杆"
+ },
+ "npmjs.com/package/adr-kit": {
+  "date": "2026-11-15",
+  "decision": "reject",
+  "score": 4,
+  "reason": "工具本身，非学习材料"
+ },
+ "martinfowler.com/bliki/architecturedecisionrecord.html": {
+  "date": "2026-11-15",
+  "decision": "reject",
+  "score": 5,
+  "reason": "资料库已有architecture-decision-record仓库收录，重复"
+ },
+ "martinfowler.com/articles/deepseek-papers.html": {
+  "date": "2026-11-15",
+  "decision": "reject",
+  "score": 6,
+  "reason": "技术综述类，与现有ai-arch资料重叠度高"
+ }
+}
