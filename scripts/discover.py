@@ -197,7 +197,8 @@ def main() -> int:
         jobs += [ex.submit(from_page, p, kws) for p in cfg["pages"]]
         if "hackernews" in cfg:
             jobs.append(ex.submit(from_hn, cfg["hackernews"], since_ts, kws))
-        jobs.append(ex.submit(from_arxiv, cfg["arxiv"], since))
+        if "arxiv" in cfg:
+            jobs.append(ex.submit(from_arxiv, cfg["arxiv"], since))
         raw = [c for j in jobs for c in j.result()]
 
     cands: dict[str, dict] = {}

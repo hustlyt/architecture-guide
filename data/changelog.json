@@ -1,5 +1,26 @@
 [
  {
+  "date": "2026-11-19",
+  "summary": "检查 43 条既有资料，链接均正常；新增 7 条，涵盖分布式验证、数据摄取和 AI 架构。修复候选发现配置。",
+  "stats": {
+   "候选": 33,
+   "审核": 33,
+   "新增": 7
+  },
+  "added": [
+   "infoq-booking-ml-platform",
+   "fowler-deterministic-simulation-testing",
+   "agent-authority-ci-pipelines",
+   "agents-evaluate-atam-saam",
+   "data-ingestion-design-decisions",
+   "stephen-cross-view-prophecy",
+   "oreilly-agent-source-control"
+  ],
+  "changed": [],
+  "removed": [],
+  "guide_changes": []
+ },
+ {
   "date": "2026-11-15",
   "summary": "新增5条AI架构/分布式实践资料，移除2条失效链接，修复discover.py配置缺失bug",
   "stats": {

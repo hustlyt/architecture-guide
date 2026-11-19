@@ -76,5 +76,203 @@
   "decision": "reject",
   "score": 6,
   "reason": "技术综述类，与现有ai-arch资料重叠度高"
+ },
+ "infoq.com/presentations/bookingcom-ml-data-platform-evolution": {
+  "date": "2026-11-19",
+  "decision": "accept",
+  "score": 9,
+  "reason": "讲者用 Booking.com 的数据迁移、模型版本和在线路由案例解释平台演进。"
+ },
+ "martinfowler.com/articles/deterministic-simulation-testing.html": {
+  "date": "2026-11-19",
+  "decision": "accept",
+  "score": 10,
+  "reason": "包含可复现的故障注入代码、正确性检查和模拟边界的设计取舍。"
+ },
+ "infoq.com/news/2026/11/onlinecohort-jan27-certification": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 3,
+  "reason": "课程报名公告，公开页只介绍主题、排期和讲师。"
+ },
+ "newsletter.pragmaticengineer.com/p/the-pulse-what-can-we-learn-from-114": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 4,
+  "reason": "安全事件的公开预览很短，核心复盘需付费阅读。"
+ },
+ "arxiv.org/abs/2611.23251": {
+  "date": "2026-11-19",
+  "decision": "accept",
+  "score": 7,
+  "reason": "基于 agent PR 的实证研究，给出 CI 审核建议；分类人工校验样本较少。"
+ },
+ "arxiv.org/abs/2611.23254": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 4,
+  "reason": "提出结构与行为合一的概念框架，缺少工具与实证，和同作者的 MBSE 稿重叠。"
+ },
+ "arxiv.org/abs/2611.23255": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 5,
+  "reason": "医疗 IoT 案例展示了形式语法，未实证验证模型一致性。"
+ },
+ "arxiv.org/abs/2611.23278": {
+  "date": "2026-11-19",
+  "decision": "accept",
+  "score": 8,
+  "reason": "公开工作流、数据与人工评估，可复现比较 ATAM 和 SAAM；输入依赖预整理的架构摘要。"
+ },
+ "arxiv.org/abs/2611.23297": {
+  "date": "2026-11-19",
+  "decision": "accept",
+  "score": 9,
+  "reason": "以 42 篇材料和 5 位从业者访谈整理数据摄取的决策、选项和驱动因素。"
+ },
+ "arxiv.org/abs/2611.23811": {
+  "date": "2026-11-19",
+  "decision": "accept",
+  "score": 9,
+  "reason": "给出跨视图验证机制，并在三种协调系统上完成机器检验的线性一致性证明。"
+ },
+ "github.com/koushenhai/kcloud-platform-iot": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 4,
+  "reason": "IoT 平台脚手架侧重功能清单，缺少架构取舍。"
+ },
+ "github.com/yangzongzhuan/ruoyi-cloud-vue3": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 3,
+  "reason": "若依 Vue3 前端集成与分支说明，学习增量低。"
+ },
+ "github.com/yangzongzhuan/ruoyi-cloud-oracle": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 3,
+  "reason": "若依 Oracle 版本与主项目重叠。"
+ },
+ "github.com/joshrotenberg/adrs": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 6,
+  "reason": "ADR 命令行工具，模板与工具链已由现有资料覆盖。"
+ },
+ "github.com/shuigedeng/taotao-cloud-project": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 4,
+  "reason": "企业脚手架列出中间件与依赖，缺少系统化案例。"
+ },
+ "github.com/open-hand/hzero": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 1,
+  "reason": "历史代码已下线，仓库保留产品说明及文档入口。"
+ },
+ "github.com/yangzongzhuan/ruoyi-cloud": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 4,
+  "reason": "说明组件配置与分支，未深入解释微服务选型。"
+ },
+ "github.com/adr/madr": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 6,
+  "reason": "MADR 官方模板可实践，已有 ADR 模板与示例条目覆盖。"
+ },
+ "github.com/study8677/architecture-copilot": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 5,
+  "reason": "架构共创工具提供问答流程，但与现有资料重叠。"
+ },
+ "github.com/topics/architecture": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 1,
+  "reason": "GitHub 主题聚合页，缺少固定教材和学习顺序。"
+ },
+ "github.com/topics/clean-architecture": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 1,
+  "reason": "GitHub 主题聚合页，缺少固定教材和学习顺序。"
+ },
+ "github.com/topics/ddd-architecture": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 1,
+  "reason": "GitHub 主题聚合页，缺少固定教材和学习顺序。"
+ },
+ "github.com/topics/event-driven-architecture": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 1,
+  "reason": "GitHub 主题聚合页，缺少固定教材和学习顺序。"
+ },
+ "github.com/topics/microservices": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 1,
+  "reason": "GitHub 主题聚合页，缺少固定教材和学习顺序。"
+ },
+ "github.com/topics/microservices-architecture": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 1,
+  "reason": "GitHub 主题聚合页，缺少固定教材和学习顺序。"
+ },
+ "github.com/topics/onion-architecture": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 1,
+  "reason": "GitHub 主题聚合页，缺少固定教材和学习顺序。"
+ },
+ "github.com/topics/software-architecture": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 1,
+  "reason": "GitHub 主题聚合页，缺少固定教材和学习顺序。"
+ },
+ "github.com/topics/vertical-slice-architecture": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 1,
+  "reason": "GitHub 主题聚合页，缺少固定教材和学习顺序。"
+ },
+ "github.com/topics/architecture-patterns": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 1,
+  "reason": "GitHub 主题聚合页，缺少固定教材和学习顺序。"
+ },
+ "oreilly.com/radar/why-git-needs-help-moving-from-files-to-systems-for-source-control": {
+  "date": "2026-11-19",
+  "decision": "accept",
+  "score": 8,
+  "reason": "结合语法树、代码属性图及执行记录讨论版本控制的设计取舍，补充编码 Agent 的系统设计案例。"
+ },
+ "oreilly.com/radar/who-governs-what-an-agent-learns": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 6,
+  "reason": "提出 Agent 学习后的治理问题，但主要是观点论述，缺少可验证的实施案例。"
+ },
+ "learn.microsoft.com/en-us/azure/databricks/agents/retrieval-augmented-generation": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 6,
+  "reason": "官方概览将检索、评估和监控映射到平台组件，现有资料已提供更具体的 RAG 实践。"
+ },
+ "docs.aws.amazon.com/prescriptive-guidance/latest/retrieval-augmented-generation-options": {
+  "date": "2026-11-19",
+  "decision": "reject",
+  "score": 6,
+  "reason": "比较 AWS 托管与自建方案；未确认窗口内实质更新，已有 RAG 架构资料覆盖基础流程。"
  }
 }
