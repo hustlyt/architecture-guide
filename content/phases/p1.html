@@ -6,7 +6,7 @@
 </ul>
 <h3>选读</h3>
 <ul>
-  <li><a href="https://autonomy.design/">业务逻辑拆分模式</a>：事务脚本 vs 领域模型 vs 表模块，对照你工作中见过的代码判断属于哪一种</li>
-  <li><a href="https://www.decodable.co/blog/revisiting-the-outbox-pattern">Revisiting the Outbox Pattern</a>：事件驱动架构里最容易踩坑的"消息可靠投递"，读完能说清楚 at-least-once vs exactly-once 的代价</li>
-  <li><a href="https://aosabook.org/en/index.html">The Architecture of Open Source Applications</a>：选 Nginx 或 PostgreSQL 一章读完，看真实项目如何做架构决策</li>
+  <li><a href="https://martinfowler.com/eaaCatalog/index.html">Martin Fowler 企业应用架构模式目录</a>：对照 Transaction Script、Domain Model、Table Module 三节，判断你熟悉的业务逻辑属于哪种结构。</li>
+  <li><a href="https://www.decodable.co/blog/revisiting-the-outbox-pattern">Revisiting the Outbox Pattern</a>：解释为什么业务更新与 outbox 写入应在同一本地事务完成，以及发布端重试时如何让消费者按事件 ID 去重。</li>
+  <li>《The Architecture of Open Source Applications》选读：<a href="https://aosabook.org/en/v2/nginx.html">nginx</a> 或 <a href="https://aosabook.org/en/v1/llvm.html">LLVM</a>，找出一个真实的架构取舍。</li>
 </ul>

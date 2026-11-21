@@ -1,12 +1,12 @@
 <h3>必做</h3>
 <ul>
   <li><a href="https://github.com/study8677/awesome-architecture">study8677/awesome-architecture</a>：RAG 系统设计 + AI Agent 架构 + AI-Native 系统模板三章，每章配套案例（DocuMind / CodePilot）对照阅读</li>
-  <li><a href="https://github.com/mehdihadeli/awesome-software-architecture">awesome-software-architecture</a> AI 专节：RAG / MCP / AI Gateway / vLLM / Multi-Agent Orchestration，了解经典架构模式如何在 AI 系统中复用</li>
+  <li><a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/secure-multitenant-rag">Azure 架构中心 · 安全的多租户 RAG</a>：对比每租户独立存储和共享索引两种方案。用图标出授权上下文如何进入每次检索，再写两个回归用例，分别覆盖跨租户和租户内越权。</li>
   <li><a href="https://github.com/Alexey-Popov/awesome-ai-architect">awesome-ai-architect</a>：通读 AI 架构模式清单（单 Agent / 多 Agent / Model Gateway / HITL / Tenant-Isolated RAG 等）</li>
 </ul>
 <h3>选读</h3>
 <ul>
-  <li><a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.177205025.54351571/v2">Rediscovering ADRs for LLM Code Generation</a>：实证研究，说清楚 ADR 作为 AI 设计记忆的机制；与 P4 结合理解"为什么 AI 时代 ADR 更重要"</li>
-  <li><a href="https://ddia.qtmuniao.com/">DDIA 逐章精读</a> 第 10–11 章：批处理与流处理，是 RAG 数据管道（向量化 / 增量更新 / 实时检索）的理论基础</li>
+  <li><a href="https://docs.cloud.google.com/architecture/choose-agentic-ai-architecture-components">Google Cloud · 选择 Agent 架构组件</a>：对照运行时、编排、工具和治理的边界，为同一个系统比较两种组合，并说明迁移代价。</li>
+  <li>结合 DDIA 的批处理与流处理章节（<a href="https://ddia.qtmuniao.com/">第一版精读</a>第 10–11 章，<a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781098119058/">第二版</a>第 11–12 章），设计一次性全量索引与增量更新，写出重跑和删除源文档时的处理方式。</li>
   <li><a href="https://github.com/donnemartin/system-design-primer">system-design-primer</a>：回顾缓存/CDN/消息队列章节，对照 AI 系统中 KV 缓存/向量缓存/推理队列的设计</li>
 </ul>

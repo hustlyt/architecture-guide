@@ -274,5 +274,17 @@
   "decision": "reject",
   "score": 6,
   "reason": "比较 AWS 托管与自建方案；未确认窗口内实质更新，已有 RAG 架构资料覆盖基础流程。"
+ },
+ "learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/secure-multitenant-rag": {
+  "date": "2026-11-22",
+  "decision": "accept",
+  "score": 9,
+  "reason": "有架构图和部署变体，帮助将权限约束落实到检索边界。"
+ },
+ "docs.cloud.google.com/architecture/choose-agentic-ai-architecture-components": {
+  "date": "2026-11-22",
+  "decision": "accept",
+  "score": 8,
+  "reason": "11 月更新的官方参考，能具体比较编排、治理和部署的取舍。"
  }
 }

@@ -1,5 +1,46 @@
 [
  {
+  "date": "2026-11-22",
+  "summary": "纠正 DDIA 版本章节与 CAP 练习，更新架构案例链接，加入多租户 RAG 和 Agent 组件设计的一手资料。",
+  "stats": {
+   "新增": 2,
+   "修订资料": 4
+  },
+  "added": [
+   "azure-secure-multitenant-rag",
+   "google-choose-agentic-ai-architecture-components"
+  ],
+  "changed": [
+   {
+    "id": "aosabook",
+    "title": "The Architecture of Open Source Applications",
+    "reason": "按原书目录修正案例范围。"
+   },
+   {
+    "id": "ddia-read",
+    "title": "DDIA 逐章精读",
+    "reason": "标明中文笔记所对应的版本，补充第二版目录。"
+   },
+   {
+    "id": "joelparkerhenderson-adr",
+    "title": "Architecture Decision Record · 模板与实例",
+    "reason": "教学页面及资料库显示名称统一使用迁移后的入口。"
+   },
+   {
+    "id": "adr-llm-techrxiv",
+    "title": "Rediscovering Architectural Decision Records",
+    "reason": "标明预印本性质，按实验设计理解结论。"
+   }
+  ],
+  "removed": [],
+  "guide_changes": [
+   "P1–P2 修复美团 DDD 链接和开源架构案例；明确 outbox 本地事务与重试去重。",
+   "P3 对照 DDIA 两版章节，按业务操作分析网络分区时的取舍，区分 Gossip 和共识。",
+   "P4 更新 ADR 模板入口，标明预印本结论的实验范围。",
+   "P5 增加多租户 RAG 和 Agent 组件取舍练习，明确检索权限与索引更新的验收条件。"
+  ]
+ },
+ {
   "date": "2026-11-20",
   "summary": "复核现有 50 条资料，链接均正常。近三周检索未发现可新增的资料，本周仅刷新健康检查结果。",
   "stats": {

@@ -4,6 +4,8 @@
 
 **网站：** https://hustlyt.github.io/architecture-guide/ · [资料库（可搜索）](https://hustlyt.github.io/architecture-guide/resources.html) · [更新日志](https://hustlyt.github.io/architecture-guide/changelog.html) · [RSS](https://hustlyt.github.io/architecture-guide/feed.xml)
 
+在本仓库根目录运行 `python3 -m http.server 8000 --bind 127.0.0.1 --directory docs`，打开 [本地课程](http://127.0.0.1:8000/) 可阅读当前工作区中的站点。
+
 ## 怎么更新
 
 每周一 09:00（北京时间）由定时任务自动运行，流程和质量标准见 [UPDATE_PLAYBOOK.md](UPDATE_PLAYBOOK.md)：

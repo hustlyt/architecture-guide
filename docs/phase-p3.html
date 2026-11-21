@@ -2,7 +2,7 @@
 <html lang="zh-CN"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>P3 分布式系统原理 · 深入学习软件架构设计</title>
-<meta name="description" content="DDIA 核心章节：复制、分区、一致性、分布式事务；CAP/BASE 权衡">
+<meta name="description" content="DDIA 核心章节：复制、分片、事务、网络与节点故障、一致性与共识">
 <link rel="alternate" type="application/rss+xml" title="深入学习软件架构设计 更新日志" href="feed.xml">
 <style>:root{
     --bg:#fbfaf7; --fg:#1d1d1b; --muted:#6b6a65; --line:#e4e1d9; --card:#ffffff;
@@ -142,20 +142,20 @@ li.del{color:var(--muted);text-decoration:line-through}
 <body><div class="topbar"><div class="wrap-top"><a class="brand" href="index.html">架构设计指南</a>
 <nav><a href="index.html">首页</a><a href="path.html" class=on>学习路线</a><a href="resources.html">资料库</a><a href="tools.html">工具网站</a><a href="about.html">关于</a><a href="changelog.html">更新日志</a></nav></div></div>
 <div class="wrap">
-<div class="layout"><aside class="side"><a class="back" href="path.html">学习路线</a><a href="phase-p0.html"><b>P0</b> 架构思维基础</a><a href="phase-p1.html"><b>P1</b> 经典架构模式</a><a href="phase-p2.html"><b>P2</b> DDD 与领域建模</a><a href="phase-p3.html" class=on><b>P3</b> 分布式系统原理</a><a href="phase-p4.html"><b>P4</b> 架构决策记录 ADR</a><a href="phase-p5.html"><b>P5</b> AI 时代的系统架构</a><a href="phase-p6.html"><b>P6</b> 架构评审与权衡实战</a></aside><article class="phasepage"><p class="crumb">P3 · 第 5–6 周</p><h1>分布式系统原理</h1><p class="lead">DDIA 核心章节：复制、分区、一致性、分布式事务；CAP/BASE 权衡</p><h2>要读什么</h2><h3>必做</h3>
+<div class="layout"><aside class="side"><a class="back" href="path.html">学习路线</a><a href="phase-p0.html"><b>P0</b> 架构思维基础</a><a href="phase-p1.html"><b>P1</b> 经典架构模式</a><a href="phase-p2.html"><b>P2</b> DDD 与领域建模</a><a href="phase-p3.html" class=on><b>P3</b> 分布式系统原理</a><a href="phase-p4.html"><b>P4</b> 架构决策记录 ADR</a><a href="phase-p5.html"><b>P5</b> AI 时代的系统架构</a><a href="phase-p6.html"><b>P6</b> 架构评审与权衡实战</a></aside><article class="phasepage"><p class="crumb">P3 · 第 5–6 周</p><h1>分布式系统原理</h1><p class="lead">DDIA 核心章节：复制、分片、事务、网络与节点故障、一致性与共识</p><h2>要读什么</h2><h3>必做</h3>
 <ul>
-  <li><a href="https://ddia.qtmuniao.com/">DDIA 逐章精读</a> 第 5–9 章：复制（Leader/Follower / 复制延迟 / 复制拓扑）、分区、事务（快照隔离 / 串行化 / 2PC）、一致性（线性化 / 因果一致 / 顺序保证）</li>
+  <li><a href="https://ddia.qtmuniao.com/">DDIA 逐章精读</a>第一版第 5–9 章，或 <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781098119058/">DDIA 第二版</a>第 6–10 章。按复制、分片、事务、分布式系统的故障、一致性与共识阅读。分别解释事务隔离的可串行化和读写语义中的线性一致性。</li>
   <li><a href="https://icyfenix.cn/">凤凰架构</a> 分布式事务章节：TCC / Saga / 本地消息表 / 事务消息，每种模式的代码示例和工作原理</li>
-  <li><a href="https://www.cnblogs.com/skyesx/p/9697817.html">如何选择分布式事务形态</a>：一页表对照 TCC / SAGA / 2PC / 补偿 / 消息最终一致性的适用场景和代价</li>
+  <li><a href="https://dspace.mit.edu/entities/publication/dfcb6512-af44-4fc9-8e8b-1a8f28f1b53a">Gilbert 与 Lynch 的 CAP 回顾</a>：给订单查询和库存扣减分别画出网络分区时的行为，标明响应条件、读写保证和恢复策略。</li>
 </ul>
 <h3>选读</h3>
 <ul>
   <li><a href="https://xiaobot.net/p/system-thinking">系统日知录</a>：分布式系统经典论文精读（Raft / Paxos / Spanner / DynamoDB），深挖一致性算法的理论基础</li>
   <li><a href="https://zouyingjie.github.io/cloudnativenotes/end/about.html">云原生架构笔记</a>：Kubernetes / 服务网格 / 可观测性，从工程实现看 DDIA 抽象概念如何落地</li>
-  <li><a href="https://icyfenix.cn/">凤凰架构</a> 事务与一致性章节：分布式共识（Paxos / Raft / Gossip）的实现细节</li>
+  <li><a href="https://icyfenix.cn/distribution/consensus/gossip.html">凤凰架构 · Gossip 协议</a>：对照同节的 Paxos、Raft，区分消息传播与对同一决策达成共识。</li>
 </ul>
-<div class="goal big">✔ 学完应做出：读完 DDIA 第 5–9 章；能回答『你的系统选了 CP 还是 AP，为什么』，并写清楚分布式事务用了什么模式。</div><nav class="pn"><a href="phase-p2.html">← P2 DDD 与领域建模</a><a href="phase-p4.html">P4 架构决策记录 ADR →</a></nav></article></div>
-<footer>最近更新：2026-11-20 · 每周一自动检索新资料、核对链接、审核后发布 ·
+<div class="goal big">✔ 学完应做出：读完 DDIA 的分布式数据部分。挑一个业务操作，说明网络分区时哪些读写可继续、哪些要拒绝或延迟，以及恢复后怎样处理冲突。</div><nav class="pn"><a href="phase-p2.html">← P2 DDD 与领域建模</a><a href="phase-p4.html">P4 架构决策记录 ADR →</a></nav></article></div>
+<footer>最近更新：2026-11-22 · 每周一自动检索新资料、核对链接、审核后发布 ·
 <a href="changelog.html">更新日志</a> · <a href="feed.xml">RSS</a> · <a href="https://github.com/hustlyt/architecture-guide">源码与数据</a></footer>
 </div>
 </body></html>

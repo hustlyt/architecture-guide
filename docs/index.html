@@ -145,27 +145,27 @@ li.del{color:var(--muted);text-decoration:line-through}
 <header class="hero">
   <h1>深入学习软件架构设计</h1>
   <p class="lead">一条从思维基础到 AI 时代的 10 周路线，加一个每周自动更新的资料库：经典书籍、架构模式、分布式系统、ADR、AI 原生架构。</p>
-  <p class="latest">最近一次更新 <a href="changelog.html#v2026-11-20">2026-11-20</a>：复核现有 50 条资料，链接均正常。近三周检索未发现可新增的资料，本周仅刷新健康检查结果。</p>
+  <p class="latest">最近一次更新 <a href="changelog.html#v2026-11-22">2026-11-22</a>：纠正 DDIA 版本章节与 CAP 练习，更新架构案例链接，加入多租户 RAG 和 Agent 组件设计的一手资料。</p>
   <p class="heroactions"><a class="btn" href="path.html">开始学习路线</a><a class="btn ghost" href="resources.html">搜索资料库</a></p>
 </header>
 <div class="verdict">
   <p style="margin:0 0 8px"><b>推荐主线：</b><a href="https://icyfenix.cn/">《凤凰架构：构筑可靠的大型分布式系统》</a>（周志明著，中文，免费在线）+ <a href="https://ddia.qtmuniao.com/">DDIA 逐章精读</a>。</p>
-  <p style="margin:0">凤凰架构是目前唯一同时覆盖<strong>单体 → 微服务 → 无服务 → 分布式事务 → 服务网格 → 可观测性 → 安全</strong>的完整中文体系。DDIA 精读补全分布式原理层（复制/分区/一致性），两者相互印证。弱项是 ADR 治理和 AI 时代架构，所以配三份补充。</p>
+  <p style="margin:0">凤凰架构结合实例讲解单体、微服务、无服务、分布式事务、服务网格、可观测性和安全。DDIA 精读补充复制、分区和一致性的原理。学习 ADR 与 AI 系统设计时，可按阶段选读下方材料。</p>
 </div>
 
 <section id="combo">
 <h2>推荐组合 <small>两本主线 + 三份补充</small></h2>
 <div class="grid">
   <div class="card"><div class="role">主线 · 分布式系统</div><h4><a href="https://icyfenix.cn/">凤凰架构</a></h4><p>中文。从单体演进到云原生，每个架构模式配 Fenix Bookstore 实战项目，包含分布式事务/Saga/TCC/服务网格/可观测性/安全完整覆盖。</p></div>
-  <div class="card"><div class="role">主线 · 数据密集型系统</div><h4><a href="https://ddia.qtmuniao.com/">DDIA 逐章精读</a></h4><p>《Designing Data-Intensive Applications》中文精读与批注。第 5–9 章（复制/分区/事务/一致性/批流处理）是分布式系统面试和设计的核心理论基础。</p></div>
+  <div class="card"><div class="role">主线 · 数据密集型系统</div><h4><a href="https://ddia.qtmuniao.com/">DDIA 逐章精读</a></h4><p>《Designing Data-Intensive Applications》第一版中文精读。第 5–9 章是复制、分区、事务和一致性的基础，第 10–11 章讲批处理和流处理。手上是<a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781098119058/">第二版</a>时，请按章节标题对照。</p></div>
   <div class="card"><div class="role">补充 · 架构模式全景</div><h4><a href="https://github.com/mehdihadeli/awesome-software-architecture">awesome-software-architecture</a></h4><p>12k★。覆盖单体/微服务/EDA/DDD/CQRS/Saga/六边形/整洁架构，含 AI 专节（RAG/MCP/Agent）。作为查阅索引，按需深挖。</p></div>
-  <div class="card"><div class="role">补充 · ADR 实践</div><h4><a href="https://github.com/joelparkerhenderson/architecture-decision-record">architecture-decision-record</a></h4><p>12k★。Nygard/MADR/Business Case/ITD 多种模板，含工具链（adr-tools/Log4brains）。配合 P4 阶段写你自己系统的 ADR。</p></div>
+  <div class="card"><div class="role">补充 · ADR 实践</div><h4><a href="https://github.com/architecture-decision-record/architecture-decision-record">architecture-decision-record</a></h4><p>Nygard、MADR、Business Case 等模板及示例。配合 P4 阶段记录自己系统里的选择和取舍。</p></div>
   <div class="card"><div class="role">补充 · AI 时代架构</div><h4><a href="https://github.com/study8677/awesome-architecture">study8677/awesome-architecture</a></h4><p>2.4k★，中英双语。26 篇教程 + 25 个模板 + 6 个端到端案例（RAG/Agent/Feed/实时协作），专注 AI 引入后的架构变迁。</p></div>
 </div>
 <p class="note">系统设计面试优先看 <a href="https://github.com/donnemartin/system-design-primer">system-design-primer</a>（27万★）和 <a href="https://github.com/ByteByteGoHq/system-design-101">system-design-101</a>（7万★），两者图解清晰，适合快速建立全景图。</p>
 </section>
-<section id="roadmap"><h2>学习路线一览 <small>7 个阶段，点进去看每周要读什么、做什么</small></h2><div class="pgrid"><a class="pcard" href="phase-p0.html"><span class="pno">P0<small>第 1 周</small></span><span><b>架构思维基础</b><span class="ps">为什么需要架构、架构师的思考方式、C4 可视化模型</span></span></a><a class="pcard" href="phase-p1.html"><span class="pno">P1<small>第 2–3 周</small></span><span><b>经典架构模式</b><span class="ps">分层、微服务、事件驱动、十二要素，以及常见架构模式的适用场景</span></span></a><a class="pcard" href="phase-p2.html"><span class="pno">P2<small>第 4 周</small></span><span><b>DDD 与领域建模</b><span class="ps">Bounded Context、聚合根、CQRS、防腐层，从贫血模型到充血模型的演进</span></span></a><a class="pcard" href="phase-p3.html"><span class="pno">P3<small>第 5–6 周</small></span><span><b>分布式系统原理</b><span class="ps">DDIA 核心章节：复制、分区、一致性、分布式事务；CAP/BASE 权衡</span></span></a><a class="pcard" href="phase-p4.html"><span class="pno">P4<small>第 7 周</small></span><span><b>架构决策记录 ADR</b><span class="ps">ADR 的写法（Nygard/MADR）、治理机制、AI 时代 ADR 作为设计记忆的新用法</span></span></a><a class="pcard" href="phase-p5.html"><span class="pno">P5<small>第 8–9 周</small></span><span><b>AI 时代的系统架构</b><span class="ps">RAG 系统、Agent 编排、向量库、模型网关、MCP 协议；经典架构如何随 AI 引入而变迁</span></span></a><a class="pcard" href="phase-p6.html"><span class="pno">P6<small>第 10 周</small></span><span><b>架构评审与权衡实战</b><span class="ps">端到端系统设计：从需求到 C4 图到 ADR，完整走一遍架构设计评审流程</span></span></a></div><p><a href="path.html">查看完整路线 →</a></p></section><section class="cta"><h2>资料库</h2><p>50 条精选书籍、文章、论文与工具，支持搜索与筛选。<a href="resources.html">打开资料库 →</a></p></section>
-<footer>最近更新：2026-11-20 · 每周一自动检索新资料、核对链接、审核后发布 ·
+<section id="roadmap"><h2>学习路线一览 <small>7 个阶段，点进去看每周要读什么、做什么</small></h2><div class="pgrid"><a class="pcard" href="phase-p0.html"><span class="pno">P0<small>第 1 周</small></span><span><b>架构思维基础</b><span class="ps">为什么需要架构、架构师的思考方式、C4 可视化模型</span></span></a><a class="pcard" href="phase-p1.html"><span class="pno">P1<small>第 2–3 周</small></span><span><b>经典架构模式</b><span class="ps">分层、微服务、事件驱动、十二要素，以及常见架构模式的适用场景</span></span></a><a class="pcard" href="phase-p2.html"><span class="pno">P2<small>第 4 周</small></span><span><b>DDD 与领域建模</b><span class="ps">Bounded Context、聚合根、CQRS、防腐层，从贫血模型到充血模型的演进</span></span></a><a class="pcard" href="phase-p3.html"><span class="pno">P3<small>第 5–6 周</small></span><span><b>分布式系统原理</b><span class="ps">DDIA 核心章节：复制、分片、事务、网络与节点故障、一致性与共识</span></span></a><a class="pcard" href="phase-p4.html"><span class="pno">P4<small>第 7 周</small></span><span><b>架构决策记录 ADR</b><span class="ps">ADR 的写法（Nygard/MADR）、治理机制、AI 时代 ADR 作为设计记忆的新用法</span></span></a><a class="pcard" href="phase-p5.html"><span class="pno">P5<small>第 8–9 周</small></span><span><b>AI 时代的系统架构</b><span class="ps">RAG 系统、Agent 编排、向量库、模型网关、MCP 协议；经典架构如何随 AI 引入而变迁</span></span></a><a class="pcard" href="phase-p6.html"><span class="pno">P6<small>第 10 周</small></span><span><b>架构评审与权衡实战</b><span class="ps">端到端系统设计：从需求到 C4 图到 ADR，完整走一遍架构设计评审流程</span></span></a></div><p><a href="path.html">查看完整路线 →</a></p></section><section class="cta"><h2>资料库</h2><p>52 条精选书籍、文章、论文与工具，支持搜索与筛选。<a href="resources.html">打开资料库 →</a></p></section>
+<footer>最近更新：2026-11-22 · 每周一自动检索新资料、核对链接、审核后发布 ·
 <a href="changelog.html">更新日志</a> · <a href="feed.xml">RSS</a> · <a href="https://github.com/hustlyt/architecture-guide">源码与数据</a></footer>
 </div>
 </body></html>

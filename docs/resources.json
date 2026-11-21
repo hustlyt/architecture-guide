@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20",
+ "updated": "2026-11-22",
  "categories": [
   {
    "id": "classics",
@@ -207,7 +207,7 @@
    "format": "book",
    "lang": "英文",
    "github": null,
-   "desc": "50 位作者解析 25+ 开源项目架构：Nginx/PostgreSQL/LLVM/Git，从实战看真实架构决策",
+   "desc": "开源项目维护者解析 nginx、LLVM 等项目的内部架构与实际取舍。",
    "pick": false,
    "added": "2026-11-15",
    "score": 8,
@@ -387,13 +387,18 @@
    "id": "ddia-read",
    "title": "DDIA 逐章精读",
    "url": "https://ddia.qtmuniao.com/",
-   "extra_links": [],
+   "extra_links": [
+    {
+     "label": "第二版目录",
+     "url": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781098119058/"
+    }
+   ],
    "category": "distributed",
    "type": "community",
    "format": "website",
    "lang": "中文",
    "github": null,
-   "desc": "《Designing Data-Intensive Applications》逐章精读与批注，附思维导图和要点总结，中文免费版",
+   "desc": "DDIA 第一版的中文精读与批注，附思维导图和要点。",
    "pick": true,
    "added": "2026-11-15",
    "score": 9,
@@ -526,7 +531,7 @@
   },
   {
    "id": "joelparkerhenderson-adr",
-   "title": "joelparkerhenderson/architecture-decision-record",
+   "title": "Architecture Decision Record · 模板与实例",
    "url": "https://github.com/architecture-decision-record/architecture-decision-record",
    "extra_links": [],
    "category": "adr",
@@ -534,7 +539,7 @@
    "format": "repo",
    "lang": "英文",
    "github": "architecture-decision-record/architecture-decision-record",
-   "desc": "ADR 模板最全参考：Nygard/MADR/Business Case/Planguage/ITD 多种模板，含示例与工具链",
+   "desc": "包含 Nygard、MADR、Business Case 等 ADR 模板，并提供示例与工具索引。",
    "pick": true,
    "added": "2026-11-15",
    "score": 9,
@@ -546,7 +551,7 @@
   },
   {
    "id": "adr-llm-techrxiv",
-   "title": "Rediscovering ADRs for LLM Code Generation",
+   "title": "Rediscovering Architectural Decision Records",
    "url": "https://www.techrxiv.org/doi/full/10.36227/techrxiv.177205025.54351571/v2",
    "extra_links": [],
    "category": "adr",
@@ -554,7 +559,7 @@
    "format": "paper",
    "lang": "英文",
    "github": null,
-   "desc": "实证研究：ADR 作为设计记忆经 MCP 注入，使 LLM 开发时长降 ~10–15%，工具调用降 11%，并自发生成 E2E 测试",
+   "desc": "研究经 MCP 提供 ADR 对编码代理表现的影响，阅读时对照实验项目、模型和指标。",
    "pick": false,
    "added": "2026-11-15",
    "score": 8,
@@ -562,7 +567,7 @@
    "pushed_at": null,
    "status": "ok",
    "last_checked": "2026-11-20",
-   "note": ""
+   "note": "TechRxiv 预印本。"
   },
   {
    "id": "oreilly-adr-applicability",
@@ -1056,6 +1061,46 @@
    "pushed_at": null,
    "status": "ok",
    "last_checked": "2026-11-20"
+  },
+  {
+   "id": "azure-secure-multitenant-rag",
+   "title": "Azure 架构中心 · 安全的多租户 RAG",
+   "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/secure-multitenant-rag",
+   "extra_links": [],
+   "category": "ai-arch",
+   "type": "official",
+   "format": "docs",
+   "lang": "英文",
+   "github": null,
+   "desc": "对比租户独立存储和共享索引，说明每次检索如何继承租户与用户授权。",
+   "pick": false,
+   "added": "2026-11-22",
+   "score": 9,
+   "stars": null,
+   "pushed_at": null,
+   "status": "ok",
+   "last_checked": "2026-11-22",
+   "note": ""
+  },
+  {
+   "id": "google-choose-agentic-ai-architecture-components",
+   "title": "Google Cloud · 选择 Agent 架构组件",
+   "url": "https://docs.cloud.google.com/architecture/choose-agentic-ai-architecture-components",
+   "extra_links": [],
+   "category": "ai-arch",
+   "type": "official",
+   "format": "docs",
+   "lang": "英文",
+   "github": null,
+   "desc": "围绕运行时、模型、工具、工作流和治理约束选择架构组件。",
+   "pick": false,
+   "added": "2026-11-22",
+   "score": 8,
+   "stars": null,
+   "pushed_at": null,
+   "status": "ok",
+   "last_checked": "2026-11-22",
+   "note": ""
   }
  ]
 }

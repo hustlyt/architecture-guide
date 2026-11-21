@@ -144,17 +144,17 @@ li.del{color:var(--muted);text-decoration:line-through}
 <div class="wrap">
 <div class="layout"><aside class="side"><a class="back" href="path.html">学习路线</a><a href="phase-p0.html"><b>P0</b> 架构思维基础</a><a href="phase-p1.html"><b>P1</b> 经典架构模式</a><a href="phase-p2.html"><b>P2</b> DDD 与领域建模</a><a href="phase-p3.html"><b>P3</b> 分布式系统原理</a><a href="phase-p4.html" class=on><b>P4</b> 架构决策记录 ADR</a><a href="phase-p5.html"><b>P5</b> AI 时代的系统架构</a><a href="phase-p6.html"><b>P6</b> 架构评审与权衡实战</a></aside><article class="phasepage"><p class="crumb">P4 · 第 7 周</p><h1>架构决策记录 ADR</h1><p class="lead">ADR 的写法（Nygard/MADR）、治理机制、AI 时代 ADR 作为设计记忆的新用法</p><h2>要读什么</h2><h3>必做</h3>
 <ul>
-  <li><a href="https://github.com/joelparkerhenderson/architecture-decision-record">architecture-decision-record</a>：对比 Nygard（最小化）、MADR（带选项对比）、Business Case（有成本/风险）三种模板，各写一个示例判断适用场景</li>
+  <li><a href="https://github.com/architecture-decision-record/architecture-decision-record">architecture-decision-record</a>：对比 Nygard、<a href="https://adr.github.io/madr/">MADR</a>、Business Case 三种模板。用同一个数据库选型写出最小记录，再补齐选项、决策依据和复审触发条件。</li>
   <li><a href="https://www.oreilly.com/radar/when-architecture-decisions-actually-apply/">When Architecture Decisions Actually Apply</a>（O'Reilly Radar）：区分"检索到 ADR"和"ADR 适用于当前情形"，理解上下文限定条件的重要性</li>
   <li><a href="https://www.infoq.com/articles/architectural-governance-ai-speed/">Architectural Governance at AI Speed</a>（InfoQ）：AI 加速开发下 ADR 执行自动化和架构飘移检测的实践</li>
 </ul>
 <h3>选读</h3>
 <ul>
-  <li><a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.177205025.54351571/v2">Rediscovering ADRs for LLM Code Generation</a>（TechRxiv）：ADR 经 MCP 注入 LLM 使开发时长降 15%、工具调用降 11% 的实证研究，对"为什么要写 ADR"有说服力</li>
-  <li><a href="https://github.com/joelparkerhenderson/architecture-decision-record">architecture-decision-record</a> 工具链部分：adr-tools / Log4brains / adr-kit，了解如何在 CI/CD 中执行 ADR 检查</li>
+  <li><a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.177205025.54351571/v2">Rediscovering Architectural Decision Records</a>（TechRxiv 预印本）：研究经 MCP 给编码代理提供 ADR 的效果。读实验时记录所用项目、模型与指标，并考虑换项目后怎样复验。</li>
+  <li><a href="https://github.com/architecture-decision-record/architecture-decision-record">architecture-decision-record</a> 工具链部分：区分生成或展示 ADR 的工具与能在 CI 中检查约束的工具。</li>
 </ul>
 <div class="goal big">✔ 学完应做出：给你在 P2 建模的系统补写 3 条 ADR，覆盖数据库选型、事务模式、API 风格三个决策；至少一条用 MADR 格式。</div><nav class="pn"><a href="phase-p3.html">← P3 分布式系统原理</a><a href="phase-p5.html">P5 AI 时代的系统架构 →</a></nav></article></div>
-<footer>最近更新：2026-11-20 · 每周一自动检索新资料、核对链接、审核后发布 ·
+<footer>最近更新：2026-11-22 · 每周一自动检索新资料、核对链接、审核后发布 ·
 <a href="changelog.html">更新日志</a> · <a href="feed.xml">RSS</a> · <a href="https://github.com/hustlyt/architecture-guide">源码与数据</a></footer>
 </div>
 </body></html>
