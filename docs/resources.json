@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22",
+ "updated": "2026-11-27",
  "categories": [
   {
    "id": "classics",
@@ -49,7 +49,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "evergreen": false
   },
   {
@@ -70,7 +70,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "evergreen": false
   },
   {
@@ -91,7 +91,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "evergreen": false
   },
   {
@@ -112,7 +112,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "evergreen": false
   },
   {
@@ -133,7 +133,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "evergreen": false
   },
   {
@@ -150,10 +150,10 @@
    "pick": true,
    "added": "2026-11-15",
    "score": 9,
-   "stars": 378535,
+   "stars": 379371,
    "pushed_at": "2026-09-15",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -170,10 +170,10 @@
    "pick": true,
    "added": "2026-11-15",
    "score": 9,
-   "stars": 91308,
+   "stars": 91416,
    "pushed_at": "2025-04-04",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": "",
    "evergreen": true
   },
@@ -191,10 +191,10 @@
    "pick": false,
    "added": "2026-11-15",
    "score": 8,
-   "stars": 43491,
+   "stars": 43610,
    "pushed_at": "2026-11-01",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -214,7 +214,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -234,7 +234,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -254,7 +254,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -274,7 +274,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -294,7 +294,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -316,10 +316,10 @@
    "pick": true,
    "added": "2026-11-15",
    "score": 9,
-   "stars": 11810,
-   "pushed_at": "2026-11-19",
+   "stars": 11827,
+   "pushed_at": "2026-11-25",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -336,10 +336,10 @@
    "pick": false,
    "added": "2026-11-15",
    "score": 8,
-   "stars": 12491,
+   "stars": 12492,
    "pushed_at": "2023-06-06",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": "原仓库 2023 年后无新提交，内容仍有效，属常青资料",
    "evergreen": true
   },
@@ -360,7 +360,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -380,7 +380,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -405,7 +405,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -425,7 +425,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -445,7 +445,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -465,7 +465,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": "付费订阅，可免费预览部分内容"
   },
   {
@@ -482,10 +482,10 @@
    "pick": false,
    "added": "2026-11-15",
    "score": 8,
-   "stars": 14148,
+   "stars": 14152,
    "pushed_at": "2024-06-04",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": "",
    "evergreen": true
   },
@@ -506,7 +506,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -526,7 +526,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -543,10 +543,10 @@
    "pick": true,
    "added": "2026-11-15",
    "score": 9,
-   "stars": 17496,
-   "pushed_at": "2026-11-17",
+   "stars": 17537,
+   "pushed_at": "2026-11-21",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -566,7 +566,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": "TechRxiv 预印本。"
   },
   {
@@ -586,7 +586,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -606,7 +606,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -628,10 +628,10 @@
    "pick": true,
    "added": "2026-11-15",
    "score": 9,
-   "stars": 2542,
+   "stars": 2562,
    "pushed_at": "2026-11-11",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -648,10 +648,10 @@
    "pick": false,
    "added": "2026-11-15",
    "score": 7,
-   "stars": 243,
+   "stars": 247,
    "pushed_at": "2026-11-18",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -671,7 +671,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -691,7 +691,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -708,10 +708,10 @@
    "pick": false,
    "added": "2026-11-15",
    "score": 8,
-   "stars": 7462,
+   "stars": 7466,
    "pushed_at": "2026-10-13",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -728,10 +728,10 @@
    "pick": false,
    "added": "2026-11-15",
    "score": 8,
-   "stars": 506,
+   "stars": 509,
    "pushed_at": "2026-11-16",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -748,10 +748,10 @@
    "pick": false,
    "added": "2026-11-15",
    "score": 8,
-   "stars": 4416,
+   "stars": 4528,
    "pushed_at": "2026-11-10",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -771,7 +771,7 @@
    "stars": 0,
    "pushed_at": "2026-09-07",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -791,7 +791,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -813,10 +813,10 @@
    "pick": false,
    "added": "2026-11-15",
    "score": 9,
-   "stars": 63562,
-   "pushed_at": "2026-11-20",
+   "stars": 63974,
+   "pushed_at": "2026-11-27",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -833,10 +833,10 @@
    "pick": true,
    "added": "2026-11-15",
    "score": 9,
-   "stars": 30438,
+   "stars": 30553,
    "pushed_at": "2026-11-02",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -853,10 +853,10 @@
    "pick": false,
    "added": "2026-11-15",
    "score": 9,
-   "stars": 25073,
-   "pushed_at": "2026-11-02",
+   "stars": 25140,
+   "pushed_at": "2026-11-24",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -873,10 +873,10 @@
    "pick": false,
    "added": "2026-11-15",
    "score": 8,
-   "stars": 123866,
-   "pushed_at": "2026-11-19",
+   "stars": 124345,
+   "pushed_at": "2026-11-26",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -898,10 +898,10 @@
    "pick": false,
    "added": "2026-11-15",
    "score": 8,
-   "stars": 11269,
-   "pushed_at": "2026-11-16",
+   "stars": 11280,
+   "pushed_at": "2026-11-22",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -923,10 +923,10 @@
    "pick": false,
    "added": "2026-11-15",
    "score": 8,
-   "stars": 29715,
-   "pushed_at": "2026-11-13",
+   "stars": 29793,
+   "pushed_at": "2026-11-20",
    "status": "ok",
-   "last_checked": "2026-11-20",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -946,7 +946,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20"
+   "last_checked": "2026-11-27"
   },
   {
    "id": "fowler-deterministic-simulation-testing",
@@ -965,7 +965,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20"
+   "last_checked": "2026-11-27"
   },
   {
    "id": "agent-authority-ci-pipelines",
@@ -984,7 +984,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20"
+   "last_checked": "2026-11-27"
   },
   {
    "id": "agents-evaluate-atam-saam",
@@ -1003,7 +1003,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20"
+   "last_checked": "2026-11-27"
   },
   {
    "id": "data-ingestion-design-decisions",
@@ -1022,7 +1022,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20"
+   "last_checked": "2026-11-27"
   },
   {
    "id": "stephen-cross-view-prophecy",
@@ -1041,7 +1041,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20"
+   "last_checked": "2026-11-27"
   },
   {
    "id": "oreilly-agent-source-control",
@@ -1060,7 +1060,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-20"
+   "last_checked": "2026-11-27"
   },
   {
    "id": "azure-secure-multitenant-rag",
@@ -1079,7 +1079,7 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-22",
+   "last_checked": "2026-11-27",
    "note": ""
   },
   {
@@ -1099,8 +1099,65 @@
    "stars": null,
    "pushed_at": null,
    "status": "ok",
-   "last_checked": "2026-11-22",
+   "last_checked": "2026-11-27",
    "note": ""
+  },
+  {
+   "id": "doordash-real-time-dispatch",
+   "title": "How DoorDash Built a Next-Generation Real-Time Dispatch Platform",
+   "url": "https://careersatdoordash.com/blog/how-doordash-built-a-next-generation-real-time-dispatch-platform/",
+   "extra_links": [],
+   "category": "distributed",
+   "type": "official",
+   "format": "article",
+   "lang": "英文",
+   "github": null,
+   "desc": "从调度延迟预算出发，拆分有状态协调器与无状态计算节点，通过影子流量验证迁移。",
+   "pick": false,
+   "added": "2026-11-27",
+   "score": 10,
+   "stars": null,
+   "pushed_at": null,
+   "status": "ok",
+   "last_checked": "2026-11-27"
+  },
+  {
+   "id": "arxiv-draft-architectural-decisions",
+   "title": "DRAFT-ing Architectural Design Decisions using LLMs",
+   "url": "https://arxiv.org/abs/2504.08207",
+   "extra_links": [],
+   "category": "adr",
+   "type": "academic",
+   "format": "paper",
+   "lang": "英文",
+   "github": null,
+   "desc": "用历史 ADR 检索和微调生成决策草稿，对照自动指标与架构师评价，讨论两者为何不一致。",
+   "pick": false,
+   "added": "2026-11-27",
+   "score": 9,
+   "stars": null,
+   "pushed_at": null,
+   "status": "ok",
+   "last_checked": "2026-11-27"
+  },
+  {
+   "id": "arxiv-agent-fault-propagation",
+   "title": "A Threshold Model of Fault Propagation in AI-Native Software Ecosystems",
+   "url": "https://arxiv.org/abs/2604.19827",
+   "extra_links": [],
+   "category": "ai-arch",
+   "type": "academic",
+   "format": "paper",
+   "lang": "英文",
+   "github": null,
+   "desc": "用并行修改的竞争关系估算故障传播阈值，适合研究多 Agent 共享仓库的架构风险。",
+   "pick": false,
+   "added": "2026-11-27",
+   "score": 8,
+   "stars": null,
+   "pushed_at": null,
+   "status": "ok",
+   "last_checked": "2026-11-27"
   }
  ]
 }

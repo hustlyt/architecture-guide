@@ -1,5 +1,22 @@
 [
  {
+  "date": "2026-11-27",
+  "summary": "52 条资料通过健康检查，新增实时调度平台迁移案例及两篇架构研究。",
+  "stats": {
+   "候选": 5,
+   "审核": 5,
+   "新增": 3
+  },
+  "added": [
+   "doordash-real-time-dispatch",
+   "arxiv-draft-architectural-decisions",
+   "arxiv-agent-fault-propagation"
+  ],
+  "changed": [],
+  "removed": [],
+  "guide_changes": []
+ },
+ {
   "date": "2026-11-22",
   "summary": "纠正 DDIA 版本章节与 CAP 练习，更新架构案例链接，加入多租户 RAG 和 Agent 组件设计的一手资料。",
   "stats": {

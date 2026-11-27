@@ -286,5 +286,35 @@
   "decision": "accept",
   "score": 8,
   "reason": "11 月更新的官方参考，能具体比较编排、治理和部署的取舍。"
+ },
+ "careersatdoordash.com/blog/how-doordash-built-a-next-generation-real-time-dispatch-platform": {
+  "date": "2026-11-27",
+  "decision": "accept",
+  "score": 10,
+  "reason": "3/2/2/2/1；本期 InfoQ 报道引出的一手复盘，覆盖容量瓶颈、架构取舍和生产迁移。"
+ },
+ "infoq.com/news/2026/11/doordash-dispatch-redesign": {
+  "date": "2026-11-27",
+  "decision": "reject",
+  "score": 6,
+  "reason": "2/1/1/1/1；与入选的 DoorDash 工程团队原文重复。"
+ },
+ "infoq.com/news/2026/11/cncf-vm-ai-workloads": {
+  "date": "2026-11-27",
+  "decision": "reject",
+  "score": 5,
+  "reason": "1/0/2/1/1；概述 492 人调查中的部署偏好，缺少隔离方案的实现或对照实验。"
+ },
+ "arxiv.org/abs/2504.08207": {
+  "date": "2026-11-27",
+  "decision": "accept",
+  "score": 9,
+  "reason": "3/2/1/2/1；在 4344 份 ADR 上比较方法，并报告人工评审未产生一致偏好。"
+ },
+ "arxiv.org/abs/2604.19827": {
+  "date": "2026-11-27",
+  "decision": "accept",
+  "score": 8,
+  "reason": "3/1/1/2/1；以 2731 个仓库重建竞争图，给出结构性风险指标，实际故障传播率仍待验证。"
  }
 }
